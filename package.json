@@ -4,7 +4,7 @@
   "description": "third OpenClassrooms project",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css --style nested"
   },
   "repository": {
     "type": "git",

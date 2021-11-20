@@ -1,27 +1,65 @@
-/* Typography */
-header h1 {
+/** Typography **/
+/* General */
+h1 {
   font-family: shrikhand;
   font-size: 1.9em;
 }
-#search input, #search h2, #search p {
+
+h2,
+h3,
+p,
+input {
   font-family: roboto;
 }
-#search-bar input, #search h2 {
+
+h2,
+h3 {
   font-weight: 700;
 }
-#search h2 {
-  font-size: 1.63em;
+
+h2 {
+  font-size: 1.5em;
+}
+
+/* Search section */
+#search-bar input {
+  font-weight: 700;
 }
 #search p {
-  font-size: 1.1em;
+  font-size: 1.125em;
 }
-/* Text and background color */
+
+/* Functioning section */
+#functioning span {
+  font-family: roboto;
+  font-size: 0.875em;
+}
+#functioning i {
+  font-size: 1.1875em;
+}
+#functioning div:nth-child(2) i {
+  transform: scale(1.04, 1);
+}
+#functioning div:nth-child(3) i {
+  transform: scale(0.8, 1);
+}
+#functioning div:nth-child(4) i {
+  transform: scale(0.79, 1);
+}
+
+/** Text and background color **/
+/* Search section */
 #search {
   background-color: #F6F6F6;
 }
 #search-bar, #search-bar input {
   background-color: #EAEAEA;
+}
+#search-bar, #search-bar input, #search p {
   color: #353535;
+}
+#search p {
+  opacity: 0.8;
 }
 #search input[type=submit] {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -30,7 +68,29 @@ header h1 {
 #search input[type=submit]:hover {
   opacity: 0.8;
 }
-/* Layout */
+
+/* Functioning section */
+#functioning div {
+  background-color: #F6F6F6;
+}
+#functioning div:nth-child(4) {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+#functioning div:nth-child(4) i {
+  color: #9356DC;
+  opacity: 1;
+}
+#functioning span {
+  background-color: #9356DC;
+  color: white;
+}
+#functioning i {
+  color: #353535;
+  opacity: 0.7;
+}
+
+/** Layout **/
+/* Header */
 header {
   padding-top: 15px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
@@ -39,6 +99,8 @@ header h1 {
   text-align: center;
   margin-bottom: 5px;
 }
+
+/* Search section */
 #search {
   padding-bottom: 25px;
 }
@@ -69,10 +131,42 @@ header h1 {
   margin: 30px auto;
   padding: 0 20px;
   border-radius: 25px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 #search input[type=submit]:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Funtioning section */
+#functioning {
+  padding: 25px 0 45px;
+}
+#functioning h2 {
+  margin: 25px 20px;
+}
+#functioning div {
+  line-height: 26px;
+  margin: 25px 20px 25px 32px;
+  padding: 23px 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#functioning span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+#functioning i {
+  width: 15px;
+  text-align: left;
+}
+#functioning h3 {
+  display: inline-block;
+  margin-left: 20px;
 }
 
 img {

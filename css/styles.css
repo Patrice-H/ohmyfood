@@ -1,5 +1,9 @@
 /** Typography **/
 /* General */
+@font-face {
+  font-family: "Awesome-Light";
+  src: url(./font/Awesome-Light-Pro.ttf);
+}
 h1 {
   font-family: shrikhand;
   font-size: 1.9em;
@@ -47,6 +51,24 @@ h2 {
   transform: scale(0.79, 1);
 }
 
+/* Restaurants section */
+#restaurants p.new {
+  font-size: 0.875em;
+  font-weight: 700;
+}
+#restaurants h3, #restaurants h3 + p {
+  font-size: 1.125em;
+}
+#restaurants button {
+  font-size: 1.5em;
+}
+#restaurants i {
+  transform: scale(0.88, 1);
+}
+#restaurants i:nth-child(2) {
+  font-family: "Awesome-Light";
+}
+
 /** Text and background color **/
 /* Search section */
 #search {
@@ -87,6 +109,31 @@ h2 {
 #functioning i {
   color: #353535;
   opacity: 0.7;
+}
+
+/* Restaurants section */
+#restaurants {
+  background-color: #F6F6F6;
+}
+#restaurants article {
+  background-color: white;
+}
+#restaurants p.new {
+  background-color: #99E2D0;
+  color: #008766;
+}
+#restaurants button {
+  background-color: transparent;
+  border: none;
+}
+#restaurants button i:nth-child(1)::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#restaurants button:hover i {
+  color: linear-gradient(#FF79DA, #9356DC);
 }
 
 /** Layout **/
@@ -169,8 +216,64 @@ header h1 {
   margin-left: 20px;
 }
 
-img {
+/* Restaurants section */
+#restaurants {
+  padding-top: 25px;
+  padding-bottom: 64px;
+}
+#restaurants h2 {
+  margin: 20px 25px;
+}
+#restaurants article {
+  position: relative;
+  margin: 20px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#restaurants img {
   width: 100%;
+  height: 174px;
+  object-fit: cover;
+  object-position: center bottom;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+}
+#restaurants article:nth-child(3) img {
+  object-position: center -150px;
+}
+#restaurants h3 {
+  margin-bottom: 4px;
+}
+#restaurants h3, #restaurants h3 + p {
+  margin-left: 12px;
+}
+#restaurants p.new {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  padding: 7px 11px;
+}
+#restaurants button {
+  position: absolute;
+  top: 191px;
+  right: 25px;
+  padding: 0;
+}
+#restaurants button:hover i:nth-child(1) {
+  opacity: 1;
+}
+#restaurants button:hover i:nth-child(2) {
+  opacity: 0;
+}
+#restaurants i:nth-child(1) {
+  opacity: 0;
+}
+#restaurants i:nth-child(2) {
+  position: absolute;
+  top: 1px;
+  right: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

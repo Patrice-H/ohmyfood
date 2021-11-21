@@ -10,6 +10,7 @@ $seventh-color: #353535;
 $eighth_color: white;
 /** Typography **/
 /* General */
+@font-face {font-family: "Awesome-Light"; src: url(./font/Awesome-Light-Pro.ttf);}
 h1 {
     font-family: shrikhand;
     font-size: 1.9em;
@@ -56,6 +57,26 @@ h2 {
         transform: scale(0.79, 1);
     }
 }
+/* Restaurants section */
+#restaurants {
+    & p.new {
+        font-size: 0.875em;
+        font-weight: 700;
+    }
+    & h3, 
+    & h3 + p {
+        font-size: 1.125em;
+    }
+    & button {
+        font-size: 1.5em;
+    }
+    & i {
+        transform: scale(0.88, 1);
+    }
+    & i:nth-child(2) {
+        font-family: "Awesome-Light";
+    }
+}
 /** Text and background color **/
 /* Search section */
 #search {
@@ -99,6 +120,30 @@ h2 {
     & i {
         color: $seventh-color;
         opacity: 0.7;
+    }
+}
+/* Restaurants section */
+#restaurants {
+    background-color: $fifth-color;
+    & article {
+        background-color: $eighth_color;
+    }
+    & p.new {
+        background-color: $third-color;
+        color: $fourth-color;
+    }
+    & button {
+        background-color: transparent;
+        border: none;
+        & i:nth-child(1)::before {
+            background: -webkit-gradient(linear, left top, left bottom, from($first-color), to($second-color));
+            background-clip: text;
+	        -webkit-background-clip: text;
+	        -webkit-text-fill-color: transparent;
+        }
+        &:hover i {
+            color: linear-gradient($second-color, $first-color);
+        }
     }
 }
 /** Layout **/
@@ -179,6 +224,63 @@ header {
         margin-left: 20px;
     }
 }
-img {
-    width: 100%;
+/* Restaurants section */
+#restaurants {
+    padding-top: 25px;
+    padding-bottom: 64px;
+    & h2 {
+        margin: 20px 25px;
+    }
+    & article {
+        position: relative;
+        margin: 20px;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+    }
+    & img {
+        width: 100%;
+        height: 174px;
+        object-fit: cover;
+        object-position: center bottom;
+        margin-bottom: 10px;
+        border-radius: 10px 10px 0 0;
+    }
+    & article:nth-child(3) img {
+        object-position: center -150px;
+    }
+    & h3 {
+        margin-bottom: 4px;
+    }
+    & h3, 
+    & h3 + p {
+        margin-left: 12px;
+    }
+    & p.new {
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        right: 10px;
+        padding: 7px 11px;
+    }
+    & button {
+        position: absolute;
+        top: 191px;
+        right: 25px;
+        padding: 0;
+        &:hover i:nth-child(1) {
+            opacity: 1;
+        }
+        &:hover i:nth-child(2) {
+            opacity: 0;
+        }
+    }
+    & i:nth-child(1) {
+        opacity: 0;
+    }
+    & i:nth-child(2) {
+        position: absolute;
+        top: 1px;
+        right: 0;
+    }
 }

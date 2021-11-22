@@ -74,6 +74,9 @@ button i:nth-child(2) {
 #menu span.detail {
   word-spacing: -0.03em;
 }
+#menu span.detail::first-letter {
+  text-transform: uppercase;
+}
 
 /* Search section */
 #search-bar input {

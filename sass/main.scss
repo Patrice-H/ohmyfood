@@ -283,6 +283,10 @@ img#la_note_enchantee {
     width: 100%;
     object-position: center -96px;
 }
+img#le_delice_des_sens {
+    width: 107%;
+    object-position: -14px top;
+}
 /* Menu article */
 #menu {
     position: relative;
@@ -331,6 +335,10 @@ img#la_note_enchantee {
     }
     & span {
         display: block;
+        &.dish, 
+        &.detail {
+            max-width: 281px;
+        }
         &.detail {
             margin-top: 4px;
         }

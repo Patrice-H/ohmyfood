@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohmyfood - Restaurant la palette du goût</title>
+    <link rel="icon" type="image/png" href="../images/ohmyfood.png" />
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" 
+        integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" 
+        crossorigin="anonymous"
+    />
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/@openfonts/shrikhand_all@1.44.2/index.css" 
+        integrity="sha256-RZo2hUNI/V8EspC3ifk4dsDHjq+oov59740eIq4VaLc=" 
+        crossorigin="anonymous"
+    />
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/css-font-roboto@1.0.0/index.css" 
+        integrity="sha256-gmxJBd6S+mxCbXV0tBDBSaayDSXwTIIjAUNEdnKAIgA=" 
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <header class="menu-pages">
+        <a href="../index.html">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1>ohmyfood</h1>
+    </header>
+    <main>
+        <div id="banner">
+            <img src="../images/la_palette_du_gout.jpg" alt="La palette du goût" title="La palette du goût" />
+        </div>
+        <article id="menu">
+            <h2>La palette du goût</h2>
+            <button>
+                <i class="fas fa-heart"></i>
+                <i class="fal fa-heart"></i>
+            </button>
+            <form action="#">
+                <fieldset>
+                    <input type="hidden" name="restaurant" value="la_palette_du_gout" />
+                    <h3>entrées</h3>
+                    <div class="dashed"></div>
+                    <input type="checkbox" name="entry" id="entry_1" value="entry_1"/>
+                    <label for="entry_1">
+                        <span class="dish">Fricassée d'escargot</span>
+                        <span class="detail">Au piment d'Espelette</span>
+                        <span class="price">25€</span>
+                    </label>
+                    <input type="checkbox" name="entry" id="entry_2" value="entry_2" />
+                    <label for="entry_2">
+                        <span class="dish">Foie gras de canard mi-cuit</span>
+                        <span class="detail">Et ses copeaux de truffe noire</span>
+                        <span class="price">35€</span>
+                    </label>
+                    <input type="checkbox" name="entry" id="entry_3" value="entry_3"/>
+                    <label for="entry_3">
+                        <span class="dish">Oeuf au plat</span>
+                        <span class="detail">Assaisonné à la truffe sur lit de caviar</span>
+                        <span class="price">20€</span>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <h3>plats</h3>
+                    <div class="dashed"></div>
+                    <input type="checkbox" name="main-course" id="main-course_1" value="main-course_1" />
+                    <label for="main-course_1">
+                        <span class="dish">Filet de boeuf aux herbes</span>
+                        <span class="detail">Accompagné de sa ribambelle de légumes</span>
+                        <span class="price">40€</span>
+                    </label>
+                    <input type="checkbox" name="main-course" id="main-course_2" value="main-course_2" />
+                    <label for="main-course_2">
+                        <span class="dish">Parmentier de queue de boeuf</span>
+                        <span class="detail">À la truffe noire sur sa purée de panais</span>
+                        <span class="price">35€</span>
+                    </label>
+                    <input type="checkbox" name="main-course" id="main-course_3" value="main-course_3" />
+                    <label for="main-course_3">
+                        <span class="dish">Filet de turbot</span>
+                        <span class="detail">Aux agrumes</span>
+                        <span class="price">44€</span>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <h3>desserts</h3>
+                    <div class="dashed"></div>
+                    <input type="checkbox" name="dessert" id="dessert_1" value="dessert_1" />
+                    <label for="dessert_1">
+                        <span class="dish">Paris-Brest</span>
+                        <span class="detail">Revisité</span>
+                        <span class="price">18€</span>
+                    </label>
+                    <input type="checkbox" name="dessert" id="dessert_2" value="dessert_2" />
+                    <label for="dessert_2">
+                        <span class="dish">Macaron au chocolat d'exception</span>
+                        <span class="detail">Et glace à la vanille de Madagascar</span>
+                        <span class="price">22€</span>
+                    </label>
+                    <input type="checkbox" name="dessert" id="dessert_3" value="dessert_3" />
+                    <label for="dessert_3">
+                        <span class="dish">Mousse au chocolat</span>
+                        <span class="detail">Au piment d'Espelette et à la truffe noire</span>
+                        <span class="price">23€</span>
+                    </label>
+                </fieldset>
+                <input type="submit" value="Commander" />
+            </form>
+        </article>
+    </main>
+    <footer>
+        <h2>ohmyfood</h2>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fas fa-utensils"></i>
+                    <span>Proposer un restaurant</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Devenir partenaire</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">Mentions légales</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

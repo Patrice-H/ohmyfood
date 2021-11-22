@@ -65,18 +65,18 @@ button {
         font-family: roboto;
         &.dish {
             font-size: 1.2em;
+            letter-spacing: -0.02em;
         }
         &.dish, 
         &.price {
             font-weight: 700;
         }
-        &.dish, 
         &.detail, 
         &.price {
             letter-spacing: -0.03em;
         }
         &.detail {
-            word-spacing: -0.03em;
+            word-spacing: -0.04em;
             &::first-letter {
                 text-transform: uppercase;
             }
@@ -344,7 +344,7 @@ img#le_delice_des_sens {
         }
         &.price {
             position: absolute;
-            right: 17px;
+            right: 20px;
             bottom: 11px;
         }
     }

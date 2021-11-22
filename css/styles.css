@@ -39,7 +39,7 @@ button {
   font-size: 1.5em;
 }
 button i {
-  transform: scale(0.88, 1);
+  transform: scale(0.94, 1);
 }
 button i:nth-child(2) {
   font-family: "Awesome-Light";
@@ -48,8 +48,9 @@ button i:nth-child(2) {
 /* Menu article */
 #menu h2 {
   font-family: shrikhand;
-  font-size: 1.9em;
+  font-size: 1.8em;
   font-weight: 400;
+  letter-spacing: -0.02em;
 }
 #menu h2::first-letter {
   text-transform: uppercase;
@@ -66,6 +67,12 @@ button i:nth-child(2) {
 }
 #menu span.dish, #menu span.price {
   font-weight: 700;
+}
+#menu span.dish, #menu span.detail, #menu span.price {
+  letter-spacing: -0.03em;
+}
+#menu span.detail {
+  word-spacing: -0.03em;
 }
 
 /* Search section */
@@ -109,8 +116,9 @@ button i:nth-child(2) {
 /* Footer */
 footer h2 {
   font-family: shrikhand;
-  font-weight: 300;
-  font-size: 1.125em;
+  font-weight: 100;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
 }
 footer a {
   font-family: roboto;
@@ -233,7 +241,7 @@ header.menu-pages {
 /* Heart button */
 button {
   position: absolute;
-  top: 32px;
+  top: 35px;
   right: 30px;
 }
 button:hover i:nth-child(1) {
@@ -259,6 +267,11 @@ button i:nth-child(2) {
   object-fit: cover;
 }
 
+img#la_note_enchantee {
+  width: 100%;
+  object-position: center -96px;
+}
+
 /* Menu article */
 #menu {
   position: relative;
@@ -266,10 +279,13 @@ button i:nth-child(2) {
   border-radius: 40px 40px 0 0;
   margin-top: -38px;
   padding-top: 30px;
-  padding-bottom: 87px;
+  padding-bottom: 22px;
 }
 #menu h2, #menu fieldset {
-  margin-left: 20px;
+  margin-left: 18px;
+}
+#menu h2 {
+  margin-bottom: -20px;
 }
 #menu h3 {
   margin-top: 22px;
@@ -280,7 +296,7 @@ button i:nth-child(2) {
   margin-top: 5px;
 }
 #menu fieldset {
-  margin: 15px;
+  margin: 23px 15px;
 }
 #menu input[type=checkbox] {
   position: absolute;
@@ -289,7 +305,7 @@ button i:nth-child(2) {
 #menu input[type=submit] {
   display: block;
   height: 50px;
-  margin: 55px auto;
+  margin: 50px auto;
   padding: 0 50px;
   border: none;
   border-radius: 25px;
@@ -298,7 +314,7 @@ button i:nth-child(2) {
   display: block;
   position: relative;
   margin-top: 15px;
-  padding: 11px 15px;
+  padding: 11px 12px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -310,7 +326,7 @@ button i:nth-child(2) {
 }
 #menu span.price {
   position: absolute;
-  right: 20px;
+  right: 17px;
   bottom: 11px;
 }
 
@@ -430,7 +446,7 @@ button i:nth-child(2) {
 
 /* Footer */
 footer {
-  padding: 20px 20px 45px;
+  padding: 20px 20px 35px;
 }
 footer h2 {
   margin-bottom: 5px;

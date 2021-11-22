@@ -40,7 +40,7 @@ header a {
 button {
     font-size: 1.5em;
     & i {
-        transform: scale(0.88, 1);
+        transform: scale(0.94, 1);
     }
     & i:nth-child(2) {
         font-family: "Awesome-Light";
@@ -50,8 +50,9 @@ button {
 #menu {
     & h2 {
         font-family: shrikhand;
-        font-size: 1.9em;
+        font-size: 1.8em;
         font-weight: 400;
+        letter-spacing: -0.02em;
     }
     & h2::first-letter {
         text-transform: uppercase;
@@ -68,6 +69,14 @@ button {
         &.dish, 
         &.price {
             font-weight: 700;
+        }
+        &.dish, 
+        &.detail, 
+        &.price {
+            letter-spacing: -0.03em;
+        }
+        &.detail {
+            word-spacing: -0.03em;
         }
     }
 }
@@ -118,8 +127,9 @@ button {
 footer {
     & h2 {
         font-family: shrikhand;
-        font-weight: 300;
-        font-size: 1.125em;
+        font-weight: 100;
+        font-size: 1.1em;
+        letter-spacing: 0.03em;
     }
     & a {
         font-family: roboto;
@@ -240,7 +250,7 @@ header {
 /* Heart button */
 button {
     position: absolute;
-    top: 32px;
+    top: 35px;
     right: 30px;
     &:hover i:nth-child(1) {
         opacity: 1;
@@ -266,6 +276,10 @@ button {
         object-fit: cover;
     }
 }
+img#la_note_enchantee {
+    width: 100%;
+    object-position: center -96px;
+}
 /* Menu article */
 #menu {
     position: relative;
@@ -273,10 +287,13 @@ button {
     border-radius: 40px 40px 0 0;
     margin-top: -38px;
     padding-top: 30px;
-    padding-bottom: 87px;
+    padding-bottom: 22px;
     & h2, 
     & fieldset {
-        margin-left: 20px;
+        margin-left: 18px;
+    }
+    & h2 {
+        margin-bottom: -20px;
     }
     & h3 {
         margin-top: 22px;
@@ -287,7 +304,7 @@ button {
         margin-top: 5px;
     }
     & fieldset {
-        margin: 15px;
+        margin: 23px 15px;
     }
     & input[type="checkbox"] {
         position: absolute;
@@ -296,7 +313,7 @@ button {
     & input[type="submit"] {
         display: block;
         height: 50px;
-        margin: 55px auto;
+        margin: 50px auto;
         padding: 0 50px;
         border: none;
         border-radius: 25px;
@@ -305,7 +322,7 @@ button {
         display: block;
         position: relative;
         margin-top: 15px;
-        padding: 11px 15px;
+        padding: 11px 12px;
         border-radius: 15px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
     }
@@ -316,7 +333,7 @@ button {
         }
         &.price {
             position: absolute;
-            right: 20px;
+            right: 17px;
             bottom: 11px;
         }
     }
@@ -436,7 +453,7 @@ button {
 }
 /* Footer */
 footer {
-    padding: 20px 20px 45px;
+    padding: 20px 20px 35px;
     & h2 {
         margin-bottom: 5px;
     }

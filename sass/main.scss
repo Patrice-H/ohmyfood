@@ -110,6 +110,9 @@ button {
     & h3 + p {
         font-size: 1.125em;
     }
+    & h3::first-letter {
+        text-transform: uppercase;
+    }
 }
 /* Footer */
 footer {

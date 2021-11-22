@@ -25,6 +25,49 @@ h2 {
   font-size: 1.5em;
 }
 
+/* Header */
+header a {
+  font-size: 1.25em;
+}
+header a:hover {
+  color: #9356DC;
+}
+
+/* Main */
+/* Heart button */
+button {
+  font-size: 1.5em;
+}
+button i {
+  transform: scale(0.88, 1);
+}
+button i:nth-child(2) {
+  font-family: "Awesome-Light";
+}
+
+/* Menu article */
+#menu h2 {
+  font-family: shrikhand;
+  font-size: 1.9em;
+  font-weight: 400;
+}
+#menu h2::first-letter {
+  text-transform: uppercase;
+}
+#menu h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+#menu span {
+  font-family: roboto;
+}
+#menu span.dish {
+  font-size: 1.2em;
+}
+#menu span.dish, #menu span.price {
+  font-weight: 700;
+}
+
 /* Search section */
 #search-bar input {
   font-weight: 700;
@@ -59,15 +102,6 @@ h2 {
 #restaurants h3, #restaurants h3 + p {
   font-size: 1.125em;
 }
-#restaurants button {
-  font-size: 1.5em;
-}
-#restaurants i {
-  transform: scale(0.88, 1);
-}
-#restaurants i:nth-child(2) {
-  font-family: "Awesome-Light";
-}
 
 /* Footer */
 footer h2 {
@@ -84,6 +118,41 @@ footer i {
 }
 
 /** Text and background color **/
+/* Main */
+/* Heart button */
+button {
+  background-color: transparent;
+  border: none;
+}
+button i:nth-child(1)::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Submit button */
+input[type=submit] {
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+input[type=submit]:hover {
+  opacity: 0.8;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Menu article */
+#menu {
+  background-color: #F6F6F6;
+}
+#menu .dashed {
+  background-color: #99E2D0;
+}
+#menu label {
+  background-color: white;
+}
+
 /* Search section */
 #search {
   background-color: #F6F6F6;
@@ -95,13 +164,6 @@ footer i {
   color: #353535;
 }
 #search p {
-  opacity: 0.8;
-}
-#search input[type=submit] {
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-}
-#search input[type=submit]:hover {
   opacity: 0.8;
 }
 
@@ -136,19 +198,6 @@ footer i {
   background-color: #99E2D0;
   color: #008766;
 }
-#restaurants button {
-  background-color: transparent;
-  border: none;
-}
-#restaurants button i:nth-child(1)::before {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-#restaurants button:hover i {
-  color: linear-gradient(#FF79DA, #9356DC);
-}
 
 /* Footer */
 footer {
@@ -164,9 +213,102 @@ header {
   padding-top: 15px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
 }
+header a {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+}
 header h1 {
   text-align: center;
   margin-bottom: 5px;
+}
+header.menu-pages {
+  box-shadow: none;
+}
+
+/* Main */
+/* Heart button */
+button {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+}
+button:hover i:nth-child(1) {
+  opacity: 1;
+}
+button:hover i:nth-child(2) {
+  opacity: 0;
+}
+button i:nth-child(1) {
+  opacity: 0;
+}
+button i:nth-child(2) {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+}
+
+/* Banner */
+#banner img {
+  width: 110%;
+  height: 255px;
+  object-position: -20px top;
+  object-fit: cover;
+}
+
+/* Menu article */
+#menu {
+  position: relative;
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  margin-top: -38px;
+  padding-top: 30px;
+  padding-bottom: 87px;
+}
+#menu h2, #menu fieldset {
+  margin-left: 20px;
+}
+#menu h3 {
+  margin-top: 22px;
+}
+#menu .dashed {
+  width: 40px;
+  height: 3px;
+  margin-top: 5px;
+}
+#menu fieldset {
+  margin: 15px;
+}
+#menu input[type=checkbox] {
+  position: absolute;
+  display: none;
+}
+#menu input[type=submit] {
+  display: block;
+  height: 50px;
+  margin: 55px auto;
+  padding: 0 50px;
+  border: none;
+  border-radius: 25px;
+}
+#menu label {
+  display: block;
+  position: relative;
+  margin-top: 15px;
+  padding: 11px 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#menu span {
+  display: block;
+}
+#menu span.detail {
+  margin-top: 4px;
+}
+#menu span.price {
+  position: absolute;
+  right: 20px;
+  bottom: 11px;
 }
 
 /* Search section */
@@ -200,10 +342,6 @@ header h1 {
   margin: 30px auto;
   padding: 0 20px;
   border-radius: 25px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-#search input[type=submit]:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* Funtioning section */
@@ -278,22 +416,11 @@ header h1 {
   padding: 7px 11px;
 }
 #restaurants button {
-  position: absolute;
   top: 191px;
   right: 25px;
   padding: 0;
 }
-#restaurants button:hover i:nth-child(1) {
-  opacity: 1;
-}
-#restaurants button:hover i:nth-child(2) {
-  opacity: 0;
-}
-#restaurants i:nth-child(1) {
-  opacity: 0;
-}
 #restaurants i:nth-child(2) {
-  position: absolute;
   top: 1px;
   right: 0;
 }

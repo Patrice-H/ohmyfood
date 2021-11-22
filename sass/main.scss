@@ -28,6 +28,49 @@ h3 {
 h2 {
     font-size: 1.5em;
 }
+/* Header */
+header a {
+    font-size: 1.25em;
+    &:hover {
+        color: $first-color;
+    }
+}
+/* Main */
+/* Heart button */
+button {
+    font-size: 1.5em;
+    & i {
+        transform: scale(0.88, 1);
+    }
+    & i:nth-child(2) {
+        font-family: "Awesome-Light";
+    }
+}
+/* Menu article */
+#menu {
+    & h2 {
+        font-family: shrikhand;
+        font-size: 1.9em;
+        font-weight: 400;
+    }
+    & h2::first-letter {
+        text-transform: uppercase;
+    }
+    & h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    & span {
+        font-family: roboto;
+        &.dish {
+            font-size: 1.2em;
+        }
+        &.dish, 
+        &.price {
+            font-weight: 700;
+        }
+    }
+}
 /* Search section */
 #search {
     &-bar input {
@@ -67,15 +110,6 @@ h2 {
     & h3 + p {
         font-size: 1.125em;
     }
-    & button {
-        font-size: 1.5em;
-    }
-    & i {
-        transform: scale(0.88, 1);
-    }
-    & i:nth-child(2) {
-        font-family: "Awesome-Light";
-    }
 }
 /* Footer */
 footer {
@@ -93,6 +127,38 @@ footer {
     }
 }
 /** Text and background color **/
+/* Main */
+/* Heart button */
+button {
+    background-color: transparent;
+    border: none;
+    & i:nth-child(1)::before {
+        background: -webkit-gradient(linear, left top, left bottom, from($first-color), to($second-color));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+/* Submit button */
+input[type="submit"] {
+    color: $eighth_color;
+    background: linear-gradient($second-color, $first-color);
+    box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
+    }
+}
+/* Menu article */
+#menu {
+    background-color: $fifth-color;
+    & .dashed {
+        background-color: $third-color;
+    }
+    & label {
+        background-color: $eighth_color;
+    }
+}
 /* Search section */
 #search {
     background-color: $fifth-color;
@@ -107,13 +173,6 @@ footer {
     }
     & p {
         opacity: 0.8;
-    }
-    & input[type="submit"] {
-        background: linear-gradient($second-color, $first-color);
-        color: $eighth_color;
-        &:hover {
-            opacity: 0.8;
-        }
     }
 }
 /* Functioning section */
@@ -147,19 +206,6 @@ footer {
         background-color: $third-color;
         color: $fourth-color;
     }
-    & button {
-        background-color: transparent;
-        border: none;
-        & i:nth-child(1)::before {
-            background: -webkit-gradient(linear, left top, left bottom, from($first-color), to($second-color));
-            background-clip: text;
-	        -webkit-background-clip: text;
-	        -webkit-text-fill-color: transparent;
-        }
-        &:hover i {
-            color: linear-gradient($second-color, $first-color);
-        }
-    }
 }
 /* Footer */
 footer {
@@ -174,9 +220,102 @@ footer {
 header {
     padding-top: 15px;
     box-shadow: 0 1px 10px rgba($color: black, $alpha: 0.4);
+    & a {
+        position: absolute;
+        top: 24px;
+        left: 20px;
+    }
     & h1 {
         text-align: center;
         margin-bottom: 5px;
+    }
+    &.menu-pages {
+        box-shadow: none;
+    }
+}
+/* Main */
+/* Heart button */
+button {
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    &:hover i:nth-child(1) {
+        opacity: 1;
+    }
+    &:hover i:nth-child(2) {
+        opacity: 0;
+    }
+    & i:nth-child(1) {
+        opacity: 0;
+    }
+    & i:nth-child(2) {
+        position: absolute;
+        top: 2px;
+        right: 6px;
+    }
+}
+/* Banner */
+#banner {
+    & img {
+        width: 110%;
+        height: 255px;
+        object-position: -20px top;
+        object-fit: cover;
+    }
+}
+/* Menu article */
+#menu {
+    position: relative;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    margin-top: -38px;
+    padding-top: 30px;
+    padding-bottom: 87px;
+    & h2, 
+    & fieldset {
+        margin-left: 20px;
+    }
+    & h3 {
+        margin-top: 22px;
+    }
+    & .dashed {
+        width: 40px;
+        height: 3px;
+        margin-top: 5px;
+    }
+    & fieldset {
+        margin: 15px;
+    }
+    & input[type="checkbox"] {
+        position: absolute;
+        display: none;
+    }
+    & input[type="submit"] {
+        display: block;
+        height: 50px;
+        margin: 55px auto;
+        padding: 0 50px;
+        border: none;
+        border-radius: 25px;
+    }
+    & label {
+        display: block;
+        position: relative;
+        margin-top: 15px;
+        padding: 11px 15px;
+        border-radius: 15px;
+        box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+    }
+    & span {
+        display: block;
+        &.detail {
+            margin-top: 4px;
+        }
+        &.price {
+            position: absolute;
+            right: 20px;
+            bottom: 11px;
+        }
     }
 }
 /* Search section */
@@ -210,10 +349,6 @@ header {
         margin: 30px auto;
         padding: 0 20px;
         border-radius: 25px;
-        box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
-        &:hover {
-            box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
-        }
     }
 }
 /* Funtioning section */
@@ -287,22 +422,11 @@ header {
         padding: 7px 11px;
     }
     & button {
-        position: absolute;
         top: 191px;
         right: 25px;
         padding: 0;
-        &:hover i:nth-child(1) {
-            opacity: 1;
-        }
-        &:hover i:nth-child(2) {
-            opacity: 0;
-        }
-    }
-    & i:nth-child(1) {
-        opacity: 0;
     }
     & i:nth-child(2) {
-        position: absolute;
         top: 1px;
         right: 0;
     }

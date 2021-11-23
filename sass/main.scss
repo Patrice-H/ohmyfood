@@ -14,6 +14,9 @@ $eighth_color: white;
 h1 {
     font-family: shrikhand;
     font-size: 1.9em;
+    @media screen and (min-width: 768px) {
+        font-size: 2.3em;
+    }
 }
 h2, 
 h3, 
@@ -27,6 +30,9 @@ h3 {
 }
 h2 {
     font-size: 1.5em;
+    @media screen and (min-width: 768px) {
+        font-size: 1.69em;
+    }
 }
 /* Header */
 header a {
@@ -44,6 +50,9 @@ button {
     }
     & i:nth-child(2) {
         font-family: "Awesome-Light";
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 1.625em;
     }
 }
 /* Menu article */
@@ -91,17 +100,28 @@ button {
     & p {
         font-size: 1.125em;
     }
+    @media screen and (min-width: 768px) {
+        font-size: 1.125em;
+    }
 }
 /* Functioning section */
 #functioning {
     & span {
         font-family: roboto;
         font-size: 0.875em;
+        @media screen and (min-width: 768px) {
+            font-size: 1em;
+        }
     }
     & i {
         font-size: 1.1875em;
     }
-
+    & h3 {
+        @media screen and (min-width: 768px) {
+            font-size: 1.1em;
+            letter-spacing: -0.03em;
+        }
+    }
     & div:nth-child(2) i {
         transform: scale(1.04, 1);
     }
@@ -117,10 +137,16 @@ button {
     & p.new {
         font-size: 0.875em;
         font-weight: 700;
+        @media screen and (min-width: 768px) {
+            font-size: 1em;
+        }
     }
     & h3, 
     & h3 + p {
         font-size: 1.125em;
+        @media screen and (min-width: 768px) {
+            font-size: 1.25em;
+        }
     }
     & h3::first-letter {
         text-transform: uppercase;
@@ -133,10 +159,16 @@ footer {
         font-weight: 100;
         font-size: 1.1em;
         letter-spacing: 0.03em;
+        @media screen and (min-width: 768px) {
+            font-size: 1.25em;
+        }
     }
     & a {
         font-family: roboto;
         font-weight: 400;
+        @media screen and (min-width: 768px) {
+            font-size: 1.125em;
+        }
     }
     & i {
         font-size: 0.82em;
@@ -248,8 +280,17 @@ header {
     &.menu-pages {
         box-shadow: none;
     }
+    @media screen and (min-width: 768px) {
+        box-shadow: none;
+    }
 }
 /* Main */
+main {
+    @media screen and (min-width: 768px) {
+        margin-top: 15px;
+        padding: 0 20px;
+    }
+}
 /* Heart button */
 button {
     position: absolute;
@@ -359,6 +400,13 @@ img#le_delice_des_sens {
             width: 135px;
             margin-left: 10px;
         }
+        @media screen and (min-width: 768px) {
+          width: 300px;
+          margin: 10px auto;
+          padding-left: 25px;
+          text-align: left;
+          border-radius: 25px; 
+        }
     }
     & h2, 
     & p {
@@ -381,12 +429,20 @@ img#le_delice_des_sens {
         padding: 0 20px;
         border-radius: 25px;
     }
+    @media screen and (min-width: 768px) {
+        padding-top: 25px;
+        border-radius: 20px;
+    }
 }
 /* Funtioning section */
 #functioning {
     padding: 25px 0 45px;
     & h2 {
         margin: 25px 20px;
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            margin: 25px 30px 0;
+        }
     }
     & div {
         line-height: 26px;
@@ -394,6 +450,11 @@ img#le_delice_des_sens {
         padding: 23px 0;
         border-radius: 20px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+        @media screen and (min-width: 768px) {
+            margin: 25px 0;
+            padding: 0 8px 22px 12px;
+            flex-grow: 1;
+        }
     }
     & span {
         display: inline-block;
@@ -403,14 +464,33 @@ img#le_delice_des_sens {
         margin-right: 20px;
         text-align: center;
         border-radius: 12px;
+        @media screen and (min-width: 768px) {
+            display: block;
+            width: 28px;
+            height: 28px;
+            line-height: 30px;
+            margin: -15px auto 10px;
+            border-radius: 14px;
+        }
     }
     & i {
         width: 15px;
         text-align: left;
+        @media screen and (min-width: 768px) {
+            width: auto;
+        }
     }
     & h3 {
         display: inline-block;
         margin-left: 20px;
+        @media screen and (min-width: 768px) {
+            margin-left: 6px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 }
 /* Restaurants section */
@@ -419,6 +499,9 @@ img#le_delice_des_sens {
     padding-bottom: 64px;
     & h2 {
         margin: 20px 25px;
+        @media screen and (min-width: 768px) {
+            margin: 20px 30px 40px;
+        }
     }
     & article {
         position: relative;
@@ -426,6 +509,9 @@ img#le_delice_des_sens {
         padding-bottom: 15px;
         border-radius: 10px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+        @media screen and (min-width: 768px) {
+            margin: 30px;
+        }
     }
     & img {
         width: 100%;
@@ -434,6 +520,9 @@ img#le_delice_des_sens {
         object-position: center bottom;
         margin-bottom: 10px;
         border-radius: 10px 10px 0 0;
+        @media screen and (min-width: 768px) {
+            height: 348px;
+        }
     }
     & article:nth-child(3) img {
         object-position: center -150px;
@@ -451,15 +540,27 @@ img#le_delice_des_sens {
         top: 10px;
         right: 10px;
         padding: 7px 11px;
+        @media screen and (min-width: 768px) {
+            top: 20px;
+            right: 20px;
+        }
     }
     & button {
         top: 191px;
         right: 25px;
         padding: 0;
+        @media screen and (min-width: 768px) {
+            top: 365px;
+        }
     }
     & i:nth-child(2) {
         top: 1px;
         right: 0;
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+        padding-bottom: 44px;
+        border-radius: 20px;
     }
 }
 /* Footer */
@@ -474,5 +575,8 @@ footer {
     }
     & span {
         margin-left: 5px;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 40px 50px 65px;
     }
 }

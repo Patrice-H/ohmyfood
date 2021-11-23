@@ -1,5 +1,5 @@
-/*** Typography ***/
-/** General **/
+/** Typography **/
+/* General */
 @font-face {
   font-family: "Awesome-Light";
   src: url(./font/Awesome-Light-Pro.ttf);
@@ -25,7 +25,7 @@ h2 {
   font-size: 1.5em;
 }
 
-/** Header **/
+/* Header */
 header a {
   font-size: 1.25em;
 }
@@ -33,7 +33,7 @@ header a:hover {
   color: #9356DC;
 }
 
-/** Main **/
+/* Main */
 /* Heart button */
 button {
   font-size: 1.5em;
@@ -117,7 +117,7 @@ button i:nth-child(2) {
   text-transform: uppercase;
 }
 
-/** Footer **/
+/* Footer */
 footer h2 {
   font-family: shrikhand;
   font-weight: 100;
@@ -132,8 +132,8 @@ footer i {
   font-size: 0.82em;
 }
 
-/*** Text and background color ***/
-/** Main **/
+/** Text and background color **/
+/* Main */
 /* Heart button */
 button {
   background-color: transparent;
@@ -214,7 +214,7 @@ input[type=submit]:hover {
   color: #008766;
 }
 
-/** Footer **/
+/* Footer */
 footer {
   background-color: #353535;
 }
@@ -222,8 +222,8 @@ footer h2, footer a {
   color: white;
 }
 
-/*** Layout ***/
-/** Header **/
+/** Layout **/
+/* Header */
 header {
   padding-top: 15px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
@@ -241,7 +241,7 @@ header.menu-pages {
   box-shadow: none;
 }
 
-/** Main **/
+/* Main */
 /* Heart button */
 button {
   position: absolute;
@@ -456,7 +456,7 @@ img#le_delice_des_sens {
   right: 0;
 }
 
-/** Footer **/
+/* Footer */
 footer {
   padding: 20px 20px 35px;
 }

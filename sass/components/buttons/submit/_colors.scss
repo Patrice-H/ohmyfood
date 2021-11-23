@@ -1,9 +1,0 @@
-input[type="submit"] {
-    color: $eighth_color;
-    background: linear-gradient($second-color, $first-color);
-    box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
-    &:hover {
-        opacity: 0.8;
-        box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
-    }
-}

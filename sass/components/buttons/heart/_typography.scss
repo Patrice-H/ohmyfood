@@ -1,0 +1,9 @@
+button {
+    font-size: 1.5em;
+    & i {
+        transform: scale(0.94, 1);
+    }
+    & i:nth-child(2) {
+        font-family: "Awesome-Light";
+    }
+}

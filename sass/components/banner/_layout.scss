@@ -1,0 +1,16 @@
+#banner {
+    & img {
+        width: 110%;
+        height: 255px;
+        object-position: -20px top;
+        object-fit: cover;
+    }
+}
+img#la_note_enchantee {
+    width: 100%;
+    object-position: center -96px;
+}
+img#le_delice_des_sens {
+    width: 107%;
+    object-position: -14px top;
+}

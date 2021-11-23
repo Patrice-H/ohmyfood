@@ -1,0 +1,30 @@
+#functioning {
+    padding: 25px 0 45px;
+    & h2 {
+        margin: 25px 20px;
+    }
+    & div {
+        line-height: 26px;
+        margin: 25px 20px 25px 32px;
+        padding: 23px 0;
+        border-radius: 20px;
+        box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+    }
+    & span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        margin-right: 20px;
+        text-align: center;
+        border-radius: 12px;
+    }
+    & i {
+        width: 15px;
+        text-align: left;
+    }
+    & h3 {
+        display: inline-block;
+        margin-left: 20px;
+    }
+}

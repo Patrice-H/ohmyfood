@@ -1,0 +1,9 @@
+#menu {
+    background-color: $fifth-color;
+    & .dashed {
+        background-color: $third-color;
+    }
+    & label {
+        background-color: $eighth_color;
+    }
+}

@@ -1,0 +1,7 @@
+/** Header **/
+header a {
+    font-size: 1.25em;
+    &:hover {
+        color: $first-color;
+    }
+}

@@ -1,0 +1,10 @@
+#restaurants {
+    background-color: $fifth-color;
+    & article {
+        background-color: $eighth_color;
+    }
+    & p.new {
+        background-color: $third-color;
+        color: $fourth-color;
+    }
+}

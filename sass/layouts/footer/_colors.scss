@@ -1,0 +1,8 @@
+/** Footer **/
+footer {
+    background-color: $seventh-color;
+    & h2, 
+    & a {
+        color:$eighth_color;
+    }    
+}

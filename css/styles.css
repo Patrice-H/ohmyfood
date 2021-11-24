@@ -13,6 +13,11 @@ h1 {
     font-size: 2.3em;
   }
 }
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 2.8em;
+  }
+}
 
 h2,
 h3,
@@ -29,11 +34,6 @@ h3 {
 h2 {
   font-size: 1.5em;
 }
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 1.69em;
-  }
-}
 
 /* Header */
 header a {
@@ -42,6 +42,11 @@ header a {
 @media screen and (min-width: 768px) {
   header a {
     font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  header a {
+    font-size: 1.75em;
   }
 }
 
@@ -128,8 +133,23 @@ button i:nth-child(2) {
     font-size: 1.125em;
   }
 }
+@media screen and (min-width: 992px) {
+  #search {
+    font-size: 1.25em;
+  }
+}
 
 /* Functioning section */
+@media screen and (min-width: 768px) {
+  #functioning h2 {
+    font-size: 1.688em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #functioning h2 {
+    font-size: 1.667em;
+  }
+}
 #functioning span {
   font-family: roboto;
   font-size: 0.875em;
@@ -148,6 +168,11 @@ button i:nth-child(2) {
     letter-spacing: -0.03em;
   }
 }
+@media screen and (min-width: 992px) {
+  #functioning h3 {
+    letter-spacing: -0.01em;
+  }
+}
 #functioning div:nth-child(2) i {
   transform: scale(1.04, 1);
 }
@@ -157,27 +182,32 @@ button i:nth-child(2) {
 #functioning div:nth-child(4) i {
   transform: scale(0.79, 1);
 }
+@media screen and (min-width: 992px) {
+  #functioning {
+    font-size: 1.125em;
+  }
+}
 
 /* Restaurants section */
 #restaurants p.new {
   font-size: 0.875em;
   font-weight: 700;
 }
-@media screen and (min-width: 768px) {
-  #restaurants p.new {
-    font-size: 1em;
-  }
-}
 #restaurants h3, #restaurants h3 + p {
   font-size: 1.125em;
 }
-@media screen and (min-width: 768px) {
-  #restaurants h3, #restaurants h3 + p {
-    font-size: 1.25em;
-  }
-}
 #restaurants h3::first-letter {
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  #restaurants {
+    font-size: 1.125em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #restaurants {
+    font-size: 1.25em;
+  }
 }
 
 /* Footer */
@@ -187,22 +217,22 @@ footer h2 {
   font-size: 1.1em;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 768px) {
-  footer h2 {
-    font-size: 1.25em;
-  }
-}
 footer a {
   font-family: roboto;
   font-weight: 400;
 }
+footer i {
+  font-size: 0.82em;
+}
 @media screen and (min-width: 768px) {
-  footer a {
+  footer {
     font-size: 1.125em;
   }
 }
-footer i {
-  font-size: 0.82em;
+@media screen and (min-width: 992px) {
+  footer {
+    font-size: 1.25em;
+  }
 }
 
 /** Text and background color **/
@@ -320,6 +350,12 @@ header a {
     left: 30px;
   }
 }
+@media screen and (min-width: 992px) {
+  header a {
+    top: 35px;
+    left: 40px;
+  }
+}
 header h1 {
   text-align: center;
   margin-bottom: 5px;
@@ -384,6 +420,13 @@ button i:nth-child(2) {
     object-position: center top;
   }
 }
+@media screen and (min-width: 992px) {
+  #banner {
+    height: 510px;
+    margin: 0 40px;
+    border-radius: 40px;
+  }
+}
 
 img#la_note_enchantee {
   width: 100%;
@@ -428,8 +471,21 @@ img#le_delice_des_sens {
   height: 3px;
   margin-top: 5px;
 }
-#menu fieldset {
+@media screen and (min-width: 992px) {
+  #menu form div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+#menu section {
   margin: 23px 15px;
+}
+@media screen and (min-width: 992px) {
+  #menu section {
+    margin: 23px 0;
+    width: 32%;
+  }
 }
 #menu input[type=checkbox] {
   position: absolute;
@@ -438,6 +494,7 @@ img#le_delice_des_sens {
 #menu input[type=submit] {
   display: block;
   height: 50px;
+  max-width: 198px;
   margin: 50px auto;
   padding: 0 50px;
   border: none;
@@ -451,6 +508,11 @@ img#le_delice_des_sens {
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+@media screen and (min-width: 992px) {
+  #menu label {
+    padding: 11px 55px 11px 12px;
+  }
+}
 #menu span {
   display: block;
 }
@@ -460,6 +522,14 @@ img#le_delice_des_sens {
 @media screen and (min-width: 768px) {
   #menu span.dish, #menu span.detail {
     max-width: inherit;
+  }
+}
+@media screen and (min-width: 992px) {
+  #menu span.dish, #menu span.detail {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
 #menu span.detail {
@@ -477,6 +547,13 @@ img#le_delice_des_sens {
     border-radius: 40px;
   }
 }
+@media screen and (min-width: 992px) {
+  #menu {
+    margin: 30px 0 0;
+    padding: 30px 40px;
+    border-radius: inherit;
+  }
+}
 
 /* Search section */
 #search {
@@ -489,6 +566,11 @@ img#le_delice_des_sens {
 #search-bar input {
   width: 135px;
   margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  #search-bar input {
+    width: 250px;
+  }
 }
 @media screen and (min-width: 768px) {
   #search-bar {
@@ -511,6 +593,9 @@ img#le_delice_des_sens {
 #search input {
   border: none;
 }
+#search input:focus {
+  outline: none;
+}
 #search input[type=submit] {
   display: block;
   height: 50px;
@@ -523,7 +608,12 @@ img#le_delice_des_sens {
   #search {
     margin: 0 20px;
     padding-top: 25px;
-    border-radius: 20px;
+    border-radius: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #search {
+    margin: 0 50px;
   }
 }
 
@@ -536,7 +626,7 @@ img#le_delice_des_sens {
 }
 @media screen and (min-width: 768px) {
   #functioning h2 {
-    width: 100%;
+    flex-basis: 90%;
     margin: 25px 30px 0;
   }
 }
@@ -552,6 +642,12 @@ img#le_delice_des_sens {
     margin: 25px 0;
     padding: 0 8px 22px 12px;
     flex-grow: 1;
+  }
+}
+@media screen and (min-width: 992px) {
+  #functioning div {
+    margin: 0 0 25px;
+    padding: 0 14px 22px;
   }
 }
 #functioning span {
@@ -599,11 +695,16 @@ img#le_delice_des_sens {
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 992px) {
+  #functioning {
+    margin: 0 50px;
+    gap: 50px;
+  }
+}
 
 /* Restaurants section */
 #restaurants {
-  padding-top: 25px;
-  padding-bottom: 64px;
+  padding: 25px 0 64px;
 }
 #restaurants h2 {
   margin: 20px 25px;
@@ -613,16 +714,30 @@ img#le_delice_des_sens {
     margin: 20px 30px 40px;
   }
 }
+@media screen and (min-width: 992px) {
+  #restaurants h2 {
+    margin: 20px 0 10px;
+    flex-basis: 60%;
+  }
+}
 #restaurants article {
   position: relative;
   margin: 20px;
   padding-bottom: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 @media screen and (min-width: 768px) {
   #restaurants article {
     margin: 30px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #restaurants article {
+    flex-basis: 43%;
+    flex-grow: 1;
+    margin: 0;
   }
 }
 #restaurants img {
@@ -631,11 +746,12 @@ img#le_delice_des_sens {
   object-fit: cover;
   object-position: center bottom;
   margin-bottom: 10px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 @media screen and (min-width: 768px) {
   #restaurants img {
     height: 348px;
+    border-radius: 30px 30px 0 0;
   }
 }
 #restaurants article:nth-child(3) img {
@@ -647,17 +763,22 @@ img#le_delice_des_sens {
 #restaurants h3, #restaurants h3 + p {
   margin-left: 12px;
 }
+@media screen and (min-width: 768px) {
+  #restaurants h3, #restaurants h3 + p {
+    margin-left: 20px;
+  }
+}
 #restaurants p.new {
   position: absolute;
   display: inline-block;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   padding: 7px 11px;
 }
 @media screen and (min-width: 768px) {
   #restaurants p.new {
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
   }
 }
 #restaurants button {
@@ -678,7 +799,16 @@ img#le_delice_des_sens {
   #restaurants {
     margin: 0 20px 40px;
     padding-bottom: 44px;
-    border-radius: 20px;
+    border-radius: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 50px 40px;
+    padding: 25px 30px 44px;
   }
 }
 
@@ -688,6 +818,28 @@ footer {
 }
 footer h2 {
   margin-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+  footer h2 {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer li {
+    margin-top: 5px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer li {
+    margin-top: 0;
+  }
 }
 footer a {
   text-decoration: none;

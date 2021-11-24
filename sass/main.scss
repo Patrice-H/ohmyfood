@@ -17,6 +17,9 @@ h1 {
     @media screen and (min-width: 768px) {
         font-size: 2.3em;
     }
+    @media screen and (min-width: 992px) {
+        font-size: 2.8em;
+    }
 }
 h2, 
 h3, 
@@ -30,15 +33,15 @@ h3 {
 }
 h2 {
     font-size: 1.5em;
-    @media screen and (min-width: 768px) {
-        font-size: 1.69em;
-    }
 }
 /* Header */
 header a {
     font-size: 1.25em;
     @media screen and (min-width: 768px) {
         font-size: 1.5em;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 1.75em;
     }
 }
 /* Main */
@@ -115,9 +118,20 @@ button {
     @media screen and (min-width: 768px) {
         font-size: 1.125em;
     }
+    @media screen and (min-width: 992px) {
+        font-size: 1.25em;
+    }
 }
 /* Functioning section */
 #functioning {
+    & h2 {
+        @media screen and (min-width: 768px) {
+            font-size: 1.688em;
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 1.667em;
+        }
+    }
     & span {
         font-family: roboto;
         font-size: 0.875em;
@@ -133,6 +147,9 @@ button {
             font-size: 1.1em;
             letter-spacing: -0.03em;
         }
+        @media screen and (min-width: 992px) {
+            letter-spacing: -0.01em;
+        }
     }
     & div:nth-child(2) i {
         transform: scale(1.04, 1);
@@ -143,25 +160,28 @@ button {
     & div:nth-child(4) i {
         transform: scale(0.79, 1);
     }
+    @media screen and (min-width: 992px) {
+        font-size: 1.125em;
+    }
 }
 /* Restaurants section */
 #restaurants {
     & p.new {
         font-size: 0.875em;
         font-weight: 700;
-        @media screen and (min-width: 768px) {
-            font-size: 1em;
-        }
     }
     & h3, 
     & h3 + p {
         font-size: 1.125em;
-        @media screen and (min-width: 768px) {
-            font-size: 1.25em;
-        }
     }
     & h3::first-letter {
         text-transform: uppercase;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 1.125em;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 1.25em;
     }
 }
 /* Footer */
@@ -171,19 +191,19 @@ footer {
         font-weight: 100;
         font-size: 1.1em;
         letter-spacing: 0.03em;
-        @media screen and (min-width: 768px) {
-            font-size: 1.25em;
-        }
     }
     & a {
         font-family: roboto;
         font-weight: 400;
-        @media screen and (min-width: 768px) {
-            font-size: 1.125em;
-        }
     }
     & i {
         font-size: 0.82em;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 1.125em;
+    }
+    @media screen and (min-width: 992px) {
+        font-size: 1.25em;
     }
 }
 /** Text and background color **/
@@ -298,6 +318,10 @@ header {
             top: 30px;
             left: 30px;
         }
+        @media screen and (min-width: 992px) {
+            top: 35px;
+            left: 40px;
+        }
     }
     & h1 {
         text-align: center;
@@ -354,6 +378,11 @@ button {
             object-position: center top;
         }
     }
+    @media screen and (min-width: 992px) {
+        height: 510px;
+        margin: 0 40px;
+        border-radius: 40px;
+    }
 }
 img#la_note_enchantee {
     width: 100%;
@@ -392,8 +421,21 @@ img#le_delice_des_sens {
         height: 3px;
         margin-top: 5px;
     }
-    & fieldset {
+    & form {
+        & div {
+            @media screen and (min-width: 992px) {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+    & section {
         margin: 23px 15px;
+        @media screen and (min-width: 992px) {
+            margin: 23px 0;
+            width: 32%;
+        }
     }
     & input[type="checkbox"] {
         position: absolute;
@@ -402,6 +444,7 @@ img#le_delice_des_sens {
     & input[type="submit"] {
         display: block;
         height: 50px;
+        max-width: 198px;
         margin: 50px auto;
         padding: 0 50px;
         border: none;
@@ -414,6 +457,9 @@ img#le_delice_des_sens {
         padding: 11px 12px;
         border-radius: 15px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+        @media screen and (min-width: 992px) {
+            padding: 11px 55px 11px 12px;
+        }
     }
     & span {
         display: block;
@@ -422,6 +468,12 @@ img#le_delice_des_sens {
             max-width: 281px;
             @media screen and (min-width: 768px) {
                 max-width: inherit;
+            }
+            @media screen and (min-width: 992px) {
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
         &.detail {
@@ -438,6 +490,11 @@ img#le_delice_des_sens {
         padding: 30px 50px 1px;
         border-radius: 40px;
     }
+    @media screen and (min-width: 992px) {
+        margin: 30px 0 0;
+        padding: 30px 40px;
+        border-radius: inherit;
+    }
 }
 /* Search section */
 #search {
@@ -448,6 +505,9 @@ img#le_delice_des_sens {
         & input {
             width: 135px;
             margin-left: 10px;
+            @media screen and (min-width: 768px) {
+                width: 250px;
+            }
         }
         @media screen and (min-width: 768px) {
           width: 300px;
@@ -469,6 +529,9 @@ img#le_delice_des_sens {
     }
     & input {
         border: none;
+        &:focus {
+            outline: none;
+        }
     }
     & input[type="submit"] {
         display: block;
@@ -481,7 +544,10 @@ img#le_delice_des_sens {
     @media screen and (min-width: 768px) {
         margin: 0 20px;
         padding-top: 25px;
-        border-radius: 20px;
+        border-radius: 40px;
+    }
+    @media screen and (min-width: 992px) {
+        margin: 0 50px;
     }
 }
 /* Funtioning section */
@@ -490,7 +556,7 @@ img#le_delice_des_sens {
     & h2 {
         margin: 25px 20px;
         @media screen and (min-width: 768px) {
-            width: 100%;
+            flex-basis: 90%;
             margin: 25px 30px 0;
         }
     }
@@ -504,6 +570,10 @@ img#le_delice_des_sens {
             margin: 25px 0;
             padding: 0 8px 22px 12px;
             flex-grow: 1;
+        }
+        @media screen and (min-width: 992px) {
+            margin: 0 0 25px;
+            padding: 0 14px 22px;
         }
     }
     & span {
@@ -543,25 +613,38 @@ img#le_delice_des_sens {
         gap: 20px;
         flex-wrap: wrap;
     }
+    @media screen and (min-width: 992px) {
+        margin: 0 50px;
+        gap: 50px;
+    }
 }
 /* Restaurants section */
 #restaurants {
-    padding-top: 25px;
-    padding-bottom: 64px;
+    padding: 25px 0 64px;
     & h2 {
         margin: 20px 25px;
         @media screen and (min-width: 768px) {
             margin: 20px 30px 40px;
+        }
+        @media screen and (min-width: 992px) {
+            margin: 20px 0 10px;
+            flex-basis: 60%;
         }
     }
     & article {
         position: relative;
         margin: 20px;
         padding-bottom: 15px;
-        border-radius: 10px;
+        border-radius: 15px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
         @media screen and (min-width: 768px) {
             margin: 30px;
+            border-radius: 30px;
+        }
+        @media screen and (min-width: 992px) {
+            flex-basis: 43%;
+            flex-grow: 1;
+            margin: 0;
         }
     }
     & img {
@@ -570,9 +653,10 @@ img#le_delice_des_sens {
         object-fit: cover;
         object-position: center bottom;
         margin-bottom: 10px;
-        border-radius: 10px 10px 0 0;
+        border-radius: 15px 15px 0 0;
         @media screen and (min-width: 768px) {
             height: 348px;
+            border-radius: 30px 30px 0 0;
         }
     }
     & article:nth-child(3) img {
@@ -584,16 +668,19 @@ img#le_delice_des_sens {
     & h3, 
     & h3 + p {
         margin-left: 12px;
+        @media screen and (min-width: 768px) {
+            margin-left: 20px;
+        }
     }
     & p.new {
         position: absolute;
         display: inline-block;
-        top: 10px;
-        right: 10px;
+        top: 15px;
+        right: 15px;
         padding: 7px 11px;
         @media screen and (min-width: 768px) {
-            top: 20px;
-            right: 20px;
+            top: 30px;
+            right: 30px;
         }
     }
     & button {
@@ -611,7 +698,14 @@ img#le_delice_des_sens {
     @media screen and (min-width: 768px) {
         margin: 0 20px 40px;
         padding-bottom: 44px;
-        border-radius: 20px;
+        border-radius: 40px;
+    }
+    @media screen and (min-width: 992px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 0 50px 40px;
+        padding: 25px 30px 44px;
     }
 }
 /* Footer */
@@ -619,6 +713,24 @@ footer {
     padding: 20px 20px 35px;
     & h2 {
         margin-bottom: 5px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 10px;
+        }
+    }
+    & ul {
+        @media screen and (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+    }
+    & li {
+        @media screen and (min-width: 768px) {
+            margin-top: 5px;
+        }
+        @media screen and (min-width: 992px) {
+            margin-top: 0;
+        }
     }
     & a {
     text-decoration: none;

@@ -37,8 +37,8 @@ h2 {
 /* Header */
 header a {
     font-size: 1.25em;
-    &:hover {
-        color: $first-color;
+    @media screen and (min-width: 768px) {
+        font-size: 1.5em;
     }
 }
 /* Main */
@@ -62,6 +62,9 @@ button {
         font-size: 1.8em;
         font-weight: 400;
         letter-spacing: -0.02em;
+        @media screen and (min-width: 768px) {
+            letter-spacing: inherit;
+        }
     }
     & h2::first-letter {
         text-transform: uppercase;
@@ -75,6 +78,9 @@ button {
         &.dish {
             font-size: 1.2em;
             letter-spacing: -0.02em;
+            @media screen and (min-width: 768px) {
+                letter-spacing: inherit;
+            }
         }
         &.dish, 
         &.price {
@@ -83,6 +89,9 @@ button {
         &.detail, 
         &.price {
             letter-spacing: -0.03em;
+            @media screen and (min-width: 768px) {
+                letter-spacing: inherit;
+            }
         }
         &.detail {
             word-spacing: -0.04em;
@@ -90,6 +99,9 @@ button {
                 text-transform: uppercase;
             }
         }
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 1.125em;
     }
 }
 /* Search section */
@@ -207,6 +219,16 @@ input[type="submit"] {
         background-color: $eighth_color;
     }
 }
+/* Header */
+header a {
+    &:link, 
+    &:visited {
+        color: black;
+    }
+    &:hover {
+        color: $first-color;
+    }
+}
 /* Search section */
 #search {
     background-color: $fifth-color;
@@ -272,6 +294,10 @@ header {
         position: absolute;
         top: 24px;
         left: 20px;
+        @media screen and (min-width: 768px) {
+            top: 30px;
+            left: 30px;
+        }
     }
     & h1 {
         text-align: center;
@@ -288,7 +314,7 @@ header {
 main {
     @media screen and (min-width: 768px) {
         margin-top: 15px;
-        padding: 0 20px;
+        /*padding: 0 20px;*/
     }
 }
 /* Heart button */
@@ -310,28 +336,43 @@ button {
         top: 2px;
         right: 6px;
     }
+    @media screen and (min-width: 768px) {
+        right: 50px;
+    }
 }
 /* Banner */
 #banner {
+    overflow: hidden;
     & img {
         width: 110%;
         height: 255px;
         object-position: -20px top;
         object-fit: cover;
+        @media screen and (min-width: 768px) {
+            width: 100%;
+            height: 510px;
+            object-position: center top;
+        }
     }
 }
 img#la_note_enchantee {
     width: 100%;
     object-position: center -96px;
+    @media screen and (min-width: 768px) {
+        object-position: center -190px;
+    }
 }
 img#le_delice_des_sens {
     width: 107%;
     object-position: -14px top;
+    @media screen and (min-width: 768px) {
+        width: 100%;
+        object-position: center -15px;
+    }
 }
 /* Menu article */
 #menu {
     position: relative;
-    width: 100%;
     border-radius: 40px 40px 0 0;
     margin-top: -38px;
     padding-top: 30px;
@@ -379,6 +420,9 @@ img#le_delice_des_sens {
         &.dish, 
         &.detail {
             max-width: 281px;
+            @media screen and (min-width: 768px) {
+                max-width: inherit;
+            }
         }
         &.detail {
             margin-top: 4px;
@@ -388,6 +432,11 @@ img#le_delice_des_sens {
             right: 20px;
             bottom: 11px;
         }
+    }
+    @media screen and (min-width: 768px) {
+        margin: 30px 50px;
+        padding: 30px 50px 1px;
+        border-radius: 40px;
     }
 }
 /* Search section */
@@ -430,6 +479,7 @@ img#le_delice_des_sens {
         border-radius: 25px;
     }
     @media screen and (min-width: 768px) {
+        margin: 0 20px;
         padding-top: 25px;
         border-radius: 20px;
     }
@@ -488,6 +538,7 @@ img#le_delice_des_sens {
         }
     }
     @media screen and (min-width: 768px) {
+        margin: 0 20px;
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
@@ -558,7 +609,7 @@ img#le_delice_des_sens {
         right: 0;
     }
     @media screen and (min-width: 768px) {
-        margin-bottom: 40px;
+        margin: 0 20px 40px;
         padding-bottom: 44px;
         border-radius: 20px;
     }

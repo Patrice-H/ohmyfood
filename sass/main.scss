@@ -47,10 +47,10 @@ header a {
 /* Main */
 /* Heart button */
 button {
-    font-size: 1.5em;
-    & i {
-        transform: scale(0.94, 1);
-    }
+    font-size: 1.5em;/*
+    & i:nth-child(1) {
+        font-weight: 700;
+    }*/
     & i:nth-child(2) {
         font-family: "Awesome-Light";
     }
@@ -213,10 +213,12 @@ button {
     background-color: transparent;
     border: none;
     & i:nth-child(1)::before {
-        background: -webkit-gradient(linear, left top, left bottom, from($first-color), to($second-color));
+        /*background: -webkit-gradient(linear, left top, left bottom, from($first-color), to($second-color));*/
+        background: linear-gradient($second-color, $first-color);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 }
 /* Submit button */
@@ -234,6 +236,9 @@ input[type="submit"] {
     background-color: $fifth-color;
     & .dashed {
         background-color: $third-color;
+    }
+    & button .mask {
+        background-color: $fifth-color;
     }
     & label {
         background-color: $eighth_color;
@@ -271,7 +276,7 @@ header a {
         background-color: $fifth-color;
     }
     & div:nth-child(4) {
-        background-color: rgba($color: $first-color, $alpha: 0.1);
+        background-color: rgba($color: $first-color, $alpha: 0.2);
         & i {
             color: $first-color;
             opacity: 1.0;
@@ -289,6 +294,12 @@ header a {
 /* Restaurants section */
 #restaurants {
     background-color: $fifth-color;
+    & a {
+        &:link, 
+        &:visited {
+            color: black;
+        }
+    }
     & article {
         background-color: $eighth_color;
     }
@@ -301,9 +312,13 @@ header a {
 footer {
     background-color: $seventh-color;
     & h2, 
-    & a {
+    & a:link, 
+    & a:visited {
         color:$eighth_color;
-    }    
+    }
+    & a:hover {
+        color: $first-color;
+    }   
 }
 /** Layout **/
 /* Header */
@@ -338,30 +353,41 @@ header {
 main {
     @media screen and (min-width: 768px) {
         margin-top: 15px;
-        /*padding: 0 20px;*/
     }
 }
 /* Heart button */
 button {
     position: absolute;
-    top: 35px;
-    right: 30px;
     &:hover i:nth-child(1) {
         opacity: 1;
     }
     &:hover i:nth-child(2) {
         opacity: 0;
+        transition: opacity 1700ms;
     }
     & i:nth-child(1) {
-        opacity: 0;
+        position: absolute;
+        opacity: 0;   
     }
     & i:nth-child(2) {
         position: absolute;
-        top: 2px;
-        right: 6px;
+        opacity: 1;
+        z-index: 2;
     }
-    @media screen and (min-width: 768px) {
-        right: 50px;
+    & .mask {
+        width: 36px;
+        height: 32px;
+        position: absolute;
+        right: -34px;
+        bottom: -31px;
+        background-color: $eighth_color;
+        transform-origin: 50% 0;
+        transform: scaleY(1);
+        transition: transform 2000ms;
+        z-index: 1;
+    }
+    &:hover .mask {
+        transform: scaleY(0);
     }
 }
 /* Banner */
@@ -406,15 +432,22 @@ img#le_delice_des_sens {
     margin-top: -38px;
     padding-top: 30px;
     padding-bottom: 22px;
-    & h2, 
-    & fieldset {
-        margin-left: 18px;
-    }
     & h2 {
-        margin-bottom: -20px;
+        margin: 0 0 -20px 18px;
+    }
+    & button {
+        top: 40px;
+        right: 60px;
+        & .mask {
+            right: -27px;
+            bottom: -29px;
+        }
     }
     & h3 {
-        margin-top: 22px;
+        margin-top: 44px;
+        @media screen and (min-width: 768px) {
+            margin-top: 22px
+        }
     }
     & .dashed {
         width: 40px;
@@ -631,6 +664,17 @@ img#le_delice_des_sens {
             flex-basis: 60%;
         }
     }
+    & a {
+        text-decoration: none;
+        &:hover article {
+            box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
+        }
+        @media screen and (min-width: 992px) {
+            flex-basis: 43%;
+            flex-grow: 1;
+            margin: 0;
+        }
+    }
     & article {
         position: relative;
         margin: 20px;
@@ -641,11 +685,6 @@ img#le_delice_des_sens {
             margin: 30px;
             border-radius: 30px;
         }
-        @media screen and (min-width: 992px) {
-            flex-basis: 43%;
-            flex-grow: 1;
-            margin: 0;
-        }
     }
     & img {
         width: 100%;
@@ -654,6 +693,9 @@ img#le_delice_des_sens {
         object-position: center bottom;
         margin-bottom: 10px;
         border-radius: 15px 15px 0 0;
+        &.vertical {
+            object-position: center -72px;
+        }
         @media screen and (min-width: 768px) {
             height: 348px;
             border-radius: 30px 30px 0 0;
@@ -684,16 +726,14 @@ img#le_delice_des_sens {
         }
     }
     & button {
+        position: absolute;
         top: 191px;
-        right: 25px;
+        right: 45px;
         padding: 0;
         @media screen and (min-width: 768px) {
             top: 365px;
+            right: 50px;
         }
-    }
-    & i:nth-child(2) {
-        top: 1px;
-        right: 0;
     }
     @media screen and (min-width: 768px) {
         margin: 0 20px 40px;

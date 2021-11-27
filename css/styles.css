@@ -526,6 +526,7 @@ header.menu-pages {
 /* Heart button */
 button {
   position: absolute;
+  cursor: pointer;
 }
 button:hover i:nth-child(1) {
   opacity: 1;
@@ -557,6 +558,11 @@ button .mask {
 }
 button:hover .mask {
   transform: scaleY(0);
+}
+
+/* Submit button */
+input[type=submit] {
+  cursor: pointer;
 }
 
 /* Banner */
@@ -673,6 +679,10 @@ img#le_delice_des_sens {
   padding: 11px 12px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+#menu label:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 992px) {
   #menu label {
@@ -963,7 +973,6 @@ img#le_delice_des_sens {
   top: 191px;
   right: 45px;
   padding: 0;
-  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   #restaurants button {

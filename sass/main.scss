@@ -478,6 +478,7 @@ main {
 /* Heart button */
 button {
     position: absolute;
+    cursor: pointer;
     &:hover i:nth-child(1) {
         opacity: 1;
     }
@@ -509,6 +510,10 @@ button {
     &:hover .mask {
         transform: scaleY(0);
     }
+}
+/* Submit button */
+input[type="submit"] {
+    cursor: pointer;
 }
 /* Banner */
 #banner {
@@ -610,6 +615,10 @@ img#le_delice_des_sens {
         padding: 11px 12px;
         border-radius: 15px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
+        }
         @media screen and (min-width: 992px) {
             padding: 11px 55px 11px 12px;
         }
@@ -852,7 +861,6 @@ img#le_delice_des_sens {
         top: 191px;
         right: 45px;
         padding: 0;
-        cursor: pointer;
         @media screen and (min-width: 768px) {
             top: 365px;
             right: 50px;

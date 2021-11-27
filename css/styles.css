@@ -892,17 +892,9 @@ img#le_delice_des_sens {
 #restaurants a:hover article {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
-@media screen and (min-width: 992px) {
-  #restaurants a {
-    flex-basis: 43%;
-    flex-grow: 1;
-    margin: 0;
-  }
-}
 #restaurants article {
   position: relative;
   margin: 20px;
-  padding-bottom: 15px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -910,6 +902,13 @@ img#le_delice_des_sens {
   #restaurants article {
     margin: 30px;
     border-radius: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #restaurants article {
+    flex-basis: 43%;
+    flex-grow: 1;
+    margin: 0;
   }
 }
 #restaurants img {
@@ -943,6 +942,9 @@ img#le_delice_des_sens {
     margin-left: 20px;
   }
 }
+#restaurants h3 + p {
+  padding-bottom: 15px;
+}
 #restaurants p.new {
   position: absolute;
   display: inline-block;
@@ -961,6 +963,7 @@ img#le_delice_des_sens {
   top: 191px;
   right: 45px;
   padding: 0;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   #restaurants button {

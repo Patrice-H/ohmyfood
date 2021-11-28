@@ -379,7 +379,6 @@ button {
   border: none;
 }
 button i:nth-child(1)::before {
-  /*background: -webkit-gradient(linear, left top, left bottom, from($first-color), to($second-color));*/
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -620,7 +619,7 @@ img#le_delice_des_sens {
   padding-bottom: 22px;
 }
 #menu h2 {
-  margin: 0 0 -20px 18px;
+  margin: 0 0 0 18px;
 }
 #menu button {
   top: 40px;
@@ -631,11 +630,11 @@ img#le_delice_des_sens {
   bottom: -29px;
 }
 #menu h3 {
-  margin-top: 44px;
+  margin-top: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   #menu h3 {
-    margin-top: 22px;
+    margin-top: 15px;
   }
 }
 #menu .dashed {
@@ -643,20 +642,109 @@ img#le_delice_des_sens {
   height: 3px;
   margin-top: 5px;
 }
+#menu form > div {
+  margin-bottom: 50px;
+  animation: standing-position 2s ease-in-out;
+}
+#menu form > div#note {
+  animation: sp-note 1s ease-in-out;
+}
+@keyframes sp-note {
+  from {
+    margin-bottom: 10px;
+  }
+  to {
+    margin-bottom: 50px;
+  }
+}
 @media screen and (min-width: 992px) {
-  #menu form div {
+  #menu form > div {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
   }
 }
+@keyframes standing-position {
+  0%, 50% {
+    margin-bottom: 20px;
+  }
+  100% {
+    margin-bottom: 50px;
+  }
+}
 #menu section {
   margin: 23px 15px;
+}
+#menu section.entry {
+  animation: e-progressive-display 2s ease-in;
+}
+#menu section.entry label {
+  animation: e-moving-label 1s ease-in-out;
+}
+@keyframes e-moving-label {
+  from {
+    margin-top: 25px;
+  }
+  to {
+    margin-top: 15px;
+  }
+}
+#menu section.main-course {
+  animation: mc-progressive-display 2500ms ease-in;
+}
+#menu section.main-course label {
+  animation: mc-moving-label 1500ms ease-in-out;
+}
+@keyframes mc-moving-label {
+  0%, 33.333% {
+    margin-top: 25px;
+  }
+  100% {
+    margin-top: 15px;
+  }
+}
+#menu section.dessert {
+  animation: d-progressive-display 3s ease-in;
+}
+#menu section.dessert label {
+  animation: d-moving-label 2s ease-in-out;
+}
+@keyframes d-moving-label {
+  0%, 50% {
+    margin-top: 25px;
+  }
+  100% {
+    margin-top: 15px;
+  }
 }
 @media screen and (min-width: 992px) {
   #menu section {
     margin: 23px 0;
     width: 32%;
+  }
+}
+@keyframes e-progressive-display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mc-progressive-display {
+  0%, 20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes d-progressive-display {
+  0%, 33.333% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 #menu input[type=checkbox] {
@@ -667,7 +755,7 @@ img#le_delice_des_sens {
   display: block;
   height: 50px;
   max-width: 198px;
-  margin: 50px auto;
+  margin: 0 auto 50px;
   padding: 0 50px;
   border: none;
   border-radius: 25px;

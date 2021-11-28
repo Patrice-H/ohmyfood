@@ -333,7 +333,6 @@ button {
     background-color: transparent;
     border: none;
     & i:nth-child(1)::before {
-        /*background: -webkit-gradient(linear, left top, left bottom, from($first-color), to($second-color));*/
         background: linear-gradient($second-color, $first-color);
         background-clip: text;
         -webkit-background-clip: text;
@@ -558,7 +557,7 @@ img#le_delice_des_sens {
     padding-top: 30px;
     padding-bottom: 22px;
     & h2 {
-        margin: 0 0 -20px 18px;
+        margin: 0 0 0 18px;
     }
     & button {
         top: 40px;
@@ -569,9 +568,9 @@ img#le_delice_des_sens {
         }
     }
     & h3 {
-        margin-top: 44px;
-        @media screen and (min-width: 768px) {
-            margin-top: 22px
+        margin-top: 30px;
+        @media screen and (min-width: 992px) {
+            margin-top: 15px;
         }
     }
     & .dashed {
@@ -580,19 +579,111 @@ img#le_delice_des_sens {
         margin-top: 5px;
     }
     & form {
-        & div {
+        & > div {
+            margin-bottom: 50px;
+            animation: standing-position 2s ease-in-out;
+            &#note {
+                animation: sp-note 1s ease-in-out;
+            }
+            @keyframes sp-note {
+                from {
+                    margin-bottom: 10px; 
+                }
+                to {
+                    margin-bottom: 50px;
+                }
+            }
             @media screen and (min-width: 992px) {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: nowrap;
             }
         }
+        @keyframes standing-position {
+            0%, 
+            50% {
+                margin-bottom: 20px;
+            }
+            100% {
+                margin-bottom: 50px;
+            }
+        }
     }
     & section {
         margin: 23px 15px;
+        &.entry {
+            animation: e-progressive-display 2s ease-in;
+            & label {
+                animation: e-moving-label 1s ease-in-out;
+            }
+            @keyframes e-moving-label {
+                from {
+                    margin-top: 25px;
+                }
+                to {
+                    margin-top: 15px;
+                }
+            }  
+        }
+        &.main-course {
+            animation: mc-progressive-display 2500ms ease-in;
+            & label {
+                animation: mc-moving-label 1500ms ease-in-out;
+            }
+            @keyframes mc-moving-label {
+                0%, 
+                33.333% {
+                    margin-top: 25px;
+                }
+                100% {
+                    margin-top: 15px;
+                }
+            }
+        }
+        &.dessert {
+            animation: d-progressive-display 3s ease-in;
+            & label {
+                animation: d-moving-label 2s ease-in-out;
+            }
+            @keyframes d-moving-label {
+                0%, 
+                50% {
+                    margin-top: 25px;
+                }
+                100% {
+                    margin-top: 15px;
+                }
+            }
+        }
         @media screen and (min-width: 992px) {
             margin: 23px 0;
             width: 32%;
+        }
+        @keyframes e-progressive-display {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes mc-progressive-display {
+            0%, 
+            20% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes d-progressive-display {
+            0%, 
+            33.333% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     }
     & input[type="checkbox"] {
@@ -603,7 +694,7 @@ img#le_delice_des_sens {
         display: block;
         height: 50px;
         max-width: 198px;
-        margin: 50px auto;
+        margin: 0 auto 50px;
         padding: 0 50px;
         border: none;
         border-radius: 25px;

@@ -1,0 +1,37 @@
+/*** Layouts ***/
+/** Header **/
+header {
+    padding-top: 15px;
+    box-shadow: 0 1px 10px rgba($color: $ninth-color, $alpha: 0.4);
+    & a {
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        &:link, 
+        &:visited {
+            color: $ninth-color;
+        }
+        &:hover {
+            color: $first-color;
+        }
+        @media screen and (min-width: 768px) {
+            top: 30px;
+            left: 30px;
+        }
+        @media screen and (min-width: 992px) {
+            top: 35px;
+            left: 40px;
+        }
+    }
+    & h1 {
+        text-align: center;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+    &.menu-pages {
+        box-shadow: none;
+    }
+    @media screen and (min-width: 768px) {
+        box-shadow: none;
+    }
+}

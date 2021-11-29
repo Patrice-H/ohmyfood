@@ -1,0 +1,247 @@
+/* Menu article */
+#menu {
+    background-color: $fifth-color;
+    position: relative;
+    border-radius: 40px 40px 0 0;
+    margin-top: -38px;
+    padding-top: 30px;
+    padding-bottom: 22px;
+    & h2 {
+        margin: 0 0 0 18px;
+    }
+    & button {
+        top: 40px;
+        right: 50px;
+        & .mask {
+            background-color: $fifth-color;
+            right: -27px;
+            bottom: -29px;
+        }
+    }
+    & h3 {
+        margin-top: 30px;
+        @media screen and (min-width: 992px) {
+            margin-top: 15px;
+        }
+    }
+    & .dashed {
+        background-color: $third-color;
+        width: 40px;
+        height: 3px;
+        margin-top: 5px;
+    }
+    & form {
+        & > div {
+            margin-bottom: 50px;
+            animation: standing-position 2s ease-in-out;
+            &#note {
+                animation: sp-note 1s ease-in-out;
+            }
+            @keyframes sp-note {
+                from {
+                    margin-bottom: 10px; 
+                }
+                to {
+                    margin-bottom: 50px;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+            }
+        }
+        @keyframes standing-position {
+            0%, 
+            50% {
+                margin-bottom: 20px;
+            }
+            100% {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    & section {
+        margin: 23px 15px;
+        &.entry {
+            animation: e-progressive-display 2s ease-in;
+            & label {
+                animation: e-moving-label 1s ease-in-out;
+            }
+            @keyframes e-moving-label {
+                from {
+                    margin-top: 25px;
+                }
+                to {
+                    margin-top: 15px;
+                }
+            }  
+        }
+        &.main-course {
+            animation: mc-progressive-display 2500ms ease-in;
+            & label {
+                animation: mc-moving-label 1500ms ease-in-out;
+            }
+            @keyframes mc-moving-label {
+                0%, 
+                33.333% {
+                    margin-top: 25px;
+                }
+                100% {
+                    margin-top: 15px;
+                }
+            }
+        }
+        &.dessert {
+            animation: d-progressive-display 3s ease-in;
+            & label {
+                animation: d-moving-label 2s ease-in-out;
+            }
+            @keyframes d-moving-label {
+                0%, 
+                50% {
+                    margin-top: 25px;
+                }
+                100% {
+                    margin-top: 15px;
+                }
+            }
+        }
+        @media screen and (min-width: 992px) {
+            margin: 23px 0;
+            width: 32%;
+        }
+        @keyframes e-progressive-display {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes mc-progressive-display {
+            0%, 
+            20% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes d-progressive-display {
+            0%, 
+            33.333% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+    & input[type="checkbox"] {
+        position: absolute;
+        display: none;
+        &:checked + label span.price {
+            margin-right: 68px;
+        } 
+        &:checked + label span.check {
+            transform: translateX(-56px);
+        }
+        &:checked + label span.check i {
+            transform: rotate(360deg);
+        }
+    }
+    & input[type="submit"] {
+        display: block;
+        height: 50px;
+        max-width: 198px;
+        margin: 0 auto 50px;
+        padding: 0 50px;
+        border: none;
+        border-radius: 25px;
+    }
+    & label {
+        background-color: $eighth-color;
+        display: flex;
+        position: relative;
+        margin-top: 15px;
+        overflow: hidden;
+        border-radius: 15px;
+        @include component-shadow(rgba($color: $ninth-color, $alpha: 0.3));
+        cursor: pointer;
+        &:hover {
+            @include component-shadow(rgba($color: $ninth-color, $alpha: 0.6));
+        }
+        &:hover span.price {
+            margin-right: 68px;
+        }
+        &:hover span.check {
+            transform: translateX(-56px);
+        }
+        &:hover i {
+            transform: rotate(360deg);
+        }
+    }
+    & span {
+        display: block;
+        &.meal {
+            flex-grow: 1;
+            margin: 11px 6px 11px 11px;
+            overflow: hidden;
+        }
+        &.dish, 
+        &.detail {
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &.dish.line-break {
+            white-space: normal;
+            @media screen and (min-width: 992px) {
+                white-space: nowrap;
+            }
+        }
+        &.detail {
+            margin-top: 4px;
+        }
+        &.price {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0 12px 11px 0;
+            transition: margin-right 400ms;
+        }
+        &.check {
+            background-color: $third-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            right: -56px;
+            min-width: 56px;
+            transition: transform 400ms;
+            & i {
+                background-color: $eighth-color;
+                color: $third-color;
+                display: inline-block;
+                width: 24px;
+                line-height: 24px;
+                border-radius: 12px;
+                text-align: center;
+                transition: transform 400ms; 
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        margin: 30px 50px;
+        padding: 30px 50px 1px;
+        border-radius: 40px;
+    }
+    @media screen and (min-width: 992px) {
+        margin: 30px 0 0;
+        padding: 30px 40px;
+        border-radius: inherit;
+    }
+}

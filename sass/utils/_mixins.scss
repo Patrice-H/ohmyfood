@@ -1,0 +1,5 @@
+/// Mixins
+// Shadows
+@mixin component-shadow ($shadow-color){
+    box-shadow: 0 5px 10px $shadow-color;
+}

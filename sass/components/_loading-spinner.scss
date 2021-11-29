@@ -1,0 +1,103 @@
+/*** Components ***/
+/** Loading spinner **/
+#loader-container, 
+#elements, 
+.utensils-mask {
+    background-color: $fifth-color;
+}
+#loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: end-animation 3s linear;
+    animation-fill-mode: forwards;
+}
+#loader {
+    background: linear-gradient(to right, $second-color 10%, $eighth-color 42%);
+    position: absolute;
+    left: 4.5vw;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    animation: spin 3s linear;
+    transform: translateZ(0);
+}
+#loader:before {
+    background-color: $eighth-color;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 100% 0 0 0;
+    content: '';
+}
+#loader:after {
+    background-color: $first-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 75%;
+    height: 75%;
+    margin: auto;
+    border-radius: 50%;
+    content: '';
+    opacity: 0.6;
+}
+#fork,
+#knife {
+    color: $first-color;
+    font-size: 6.5vw;
+    position: absolute;
+    top: 24%;
+    opacity: 0.6;
+}
+#fork .utensils-mask {
+    position: absolute;
+    left: 60%;
+    width: 2.4vw;
+    height: 7vw;
+}
+#knife {
+    left:13.2vw;
+}
+#knife .utensils-mask {
+    position: absolute;
+    right: 45%;
+    width: 2.4vw;
+    height: 7vw;   
+}
+#elements {
+    position: relative;
+    width: 19vw;
+    height: 10vw;
+    margin: 45vh auto;
+}
+@keyframes end-animation {
+    0% {
+        background-color: $fifth-color;
+        opacity: 1;
+        z-index: 10;
+    }
+    99.999% {
+        background-color: $fifth-color;
+        opacity: 1;
+        z-index: 10;
+    }
+    100% {
+        background-color: transparent;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

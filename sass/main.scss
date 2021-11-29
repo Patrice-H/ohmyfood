@@ -209,15 +209,9 @@ button {
         &.price {
             font-weight: 700;
         }
-        &.detail, 
-        &.price {
-            letter-spacing: -0.03em;
-            @media screen and (min-width: 768px) {
-                letter-spacing: inherit;
-            }
-        }
         &.detail {
             word-spacing: -0.04em;
+            letter-spacing: -0.02em;
             &::first-letter {
                 text-transform: uppercase;
             }
@@ -362,6 +356,15 @@ input[type="submit"] {
     & label {
         background-color: $eighth_color;
     }
+    & span {
+        &.check {
+            background-color: $third-color;
+            & i {
+                background-color: $eighth_color;
+                color: $third-color;
+            }
+        }
+    }
 }
 /* Header */
 header a {
@@ -395,7 +398,7 @@ header a {
         background-color: $fifth-color;
     }
     & div:nth-child(4) {
-        background-color: rgba($color: $first-color, $alpha: 0.2);
+        background-color: rgba($color: $first-color, $alpha: 0.1);
         & i {
             color: $first-color;
             opacity: 1.0;
@@ -460,6 +463,7 @@ header {
     & h1 {
         text-align: center;
         margin-bottom: 5px;
+        padding-bottom: 5px;
     }
     &.menu-pages {
         box-shadow: none;
@@ -561,7 +565,7 @@ img#le_delice_des_sens {
     }
     & button {
         top: 40px;
-        right: 60px;
+        right: 50px;
         & .mask {
             right: -27px;
             bottom: -29px;
@@ -689,6 +693,15 @@ img#le_delice_des_sens {
     & input[type="checkbox"] {
         position: absolute;
         display: none;
+        &:checked + label span.price {
+            margin-right: 72px;
+        } 
+        &:checked + label span.check {
+            transform: translateX(-60px);
+        }
+        &:checked + label span.check i {
+            transform: rotate(360deg);
+        }
     }
     & input[type="submit"] {
         display: block;
@@ -700,42 +713,73 @@ img#le_delice_des_sens {
         border-radius: 25px;
     }
     & label {
-        display: block;
+        display: flex;
         position: relative;
         margin-top: 15px;
-        padding: 11px 12px;
+        overflow: hidden;
         border-radius: 15px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
         cursor: pointer;
         &:hover {
             box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
         }
-        @media screen and (min-width: 992px) {
-            padding: 11px 55px 11px 12px;
+        &:hover span.price {
+            margin-right: 68px;
+        }
+        &:hover span.check {
+            transform: translateX(-56px);
+        }
+        &:hover i {
+            transform: rotate(360deg);
         }
     }
     & span {
         display: block;
+        &.meal {
+            flex-grow: 1;
+            margin: 11px 6px 11px 11px;
+            overflow: hidden;
+        }
         &.dish, 
         &.detail {
-            max-width: 281px;
-            @media screen and (min-width: 768px) {
-                max-width: inherit;
-            }
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &.dish.line-break {
+            white-space: normal;
             @media screen and (min-width: 992px) {
-                width: 100%;
                 white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
             }
         }
         &.detail {
             margin-top: 4px;
         }
         &.price {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 0 12px 11px 0;
+            transition: margin-right 400ms;
+        }
+        &.check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
-            right: 20px;
-            bottom: 11px;
+            height: 100%;
+            right: -56px;
+            min-width: 56px;
+            transition: transform 400ms;
+            & i {
+                display: inline-block;
+                width: 24px;
+                line-height: 24px;
+                border-radius: 12px;
+                text-align: center;
+                transition: transform 400ms; 
+            }
         }
     }
     @media screen and (min-width: 768px) {
@@ -753,7 +797,7 @@ img#le_delice_des_sens {
 #search {
     padding-bottom: 25px;
     &-bar {
-        line-height: 50px;
+        line-height: 46px;
         text-align: center;
         & input {
             width: 135px;
@@ -775,7 +819,7 @@ img#le_delice_des_sens {
         text-align: center;
     }
     & h2 {
-        margin: 40px 60px 0;
+        margin: 35px 60px 0;
     }
     & p {
         margin: 15px 15px;
@@ -873,9 +917,9 @@ img#le_delice_des_sens {
 }
 /* Restaurants section */
 #restaurants {
-    padding: 25px 0 64px;
+    padding: 25px 0 50px;
     & h2 {
-        margin: 20px 25px;
+        margin: 25px;
         @media screen and (min-width: 768px) {
             margin: 20px 30px 40px;
         }
@@ -886,15 +930,15 @@ img#le_delice_des_sens {
     }
     & a {
         text-decoration: none;
-        &:hover article {
-            box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
-        }
     }
     & article {
         position: relative;
         margin: 20px;
         border-radius: 15px;
         box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.3);
+        &:hover {
+            box-shadow: 0 5px 10px rgba($color: black, $alpha: 0.6);
+        }
         @media screen and (min-width: 768px) {
             margin: 30px;
             border-radius: 30px;
@@ -974,10 +1018,7 @@ img#le_delice_des_sens {
 footer {
     padding: 20px 20px 35px;
     & h2 {
-        margin-bottom: 5px;
-        @media screen and (min-width: 768px) {
-            margin-bottom: 10px;
-        }
+        margin-bottom: 10px;
     }
     & ul {
         @media screen and (min-width: 992px) {

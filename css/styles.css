@@ -237,16 +237,9 @@ button i:nth-child(2) {
 #menu span.dish, #menu span.price {
   font-weight: 700;
 }
-#menu span.detail, #menu span.price {
-  letter-spacing: -0.03em;
-}
-@media screen and (min-width: 768px) {
-  #menu span.detail, #menu span.price {
-    letter-spacing: inherit;
-  }
-}
 #menu span.detail {
   word-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 #menu span.detail::first-letter {
   text-transform: uppercase;
@@ -410,6 +403,13 @@ input[type=submit]:hover {
 #menu label {
   background-color: white;
 }
+#menu span.check {
+  background-color: #99E2D0;
+}
+#menu span.check i {
+  background-color: white;
+  color: #99E2D0;
+}
 
 /* Header */
 header a:link, header a:visited {
@@ -438,7 +438,7 @@ header a:hover {
   background-color: #F6F6F6;
 }
 #functioning div:nth-child(4) {
-  background-color: rgba(147, 86, 220, 0.2);
+  background-color: rgba(147, 86, 220, 0.1);
 }
 #functioning div:nth-child(4) i {
   color: #9356DC;
@@ -505,6 +505,7 @@ header a {
 header h1 {
   text-align: center;
   margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 header.menu-pages {
   box-shadow: none;
@@ -623,7 +624,7 @@ img#le_delice_des_sens {
 }
 #menu button {
   top: 40px;
-  right: 60px;
+  right: 50px;
 }
 #menu button .mask {
   right: -27px;
@@ -751,6 +752,15 @@ img#le_delice_des_sens {
   position: absolute;
   display: none;
 }
+#menu input[type=checkbox]:checked + label span.price {
+  margin-right: 72px;
+}
+#menu input[type=checkbox]:checked + label span.check {
+  transform: translateX(-60px);
+}
+#menu input[type=checkbox]:checked + label span.check i {
+  transform: rotate(360deg);
+}
 #menu input[type=submit] {
   display: block;
   height: 50px;
@@ -761,10 +771,10 @@ img#le_delice_des_sens {
   border-radius: 25px;
 }
 #menu label {
-  display: block;
+  display: flex;
   position: relative;
   margin-top: 15px;
-  padding: 11px 12px;
+  overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -772,37 +782,64 @@ img#le_delice_des_sens {
 #menu label:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
-@media screen and (min-width: 992px) {
-  #menu label {
-    padding: 11px 55px 11px 12px;
-  }
+#menu label:hover span.price {
+  margin-right: 68px;
+}
+#menu label:hover span.check {
+  transform: translateX(-56px);
+}
+#menu label:hover i {
+  transform: rotate(360deg);
 }
 #menu span {
   display: block;
 }
-#menu span.dish, #menu span.detail {
-  max-width: 281px;
+#menu span.meal {
+  flex-grow: 1;
+  margin: 11px 6px 11px 11px;
+  overflow: hidden;
 }
-@media screen and (min-width: 768px) {
-  #menu span.dish, #menu span.detail {
-    max-width: inherit;
-  }
+#menu span.dish, #menu span.detail {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#menu span.dish.line-break {
+  white-space: normal;
 }
 @media screen and (min-width: 992px) {
-  #menu span.dish, #menu span.detail {
-    width: 100%;
+  #menu span.dish.line-break {
     white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
   }
 }
 #menu span.detail {
   margin-top: 4px;
 }
 #menu span.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 12px 11px 0;
+  transition: margin-right 400ms;
+}
+#menu span.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: 20px;
-  bottom: 11px;
+  height: 100%;
+  right: -56px;
+  min-width: 56px;
+  transition: transform 400ms;
+}
+#menu span.check i {
+  display: inline-block;
+  width: 24px;
+  line-height: 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 400ms;
 }
 @media screen and (min-width: 768px) {
   #menu {
@@ -824,7 +861,7 @@ img#le_delice_des_sens {
   padding-bottom: 25px;
 }
 #search-bar {
-  line-height: 50px;
+  line-height: 46px;
   text-align: center;
 }
 #search-bar input {
@@ -849,7 +886,7 @@ img#le_delice_des_sens {
   text-align: center;
 }
 #search h2 {
-  margin: 40px 60px 0;
+  margin: 35px 60px 0;
 }
 #search p {
   margin: 15px 15px;
@@ -968,10 +1005,10 @@ img#le_delice_des_sens {
 
 /* Restaurants section */
 #restaurants {
-  padding: 25px 0 64px;
+  padding: 25px 0 50px;
 }
 #restaurants h2 {
-  margin: 20px 25px;
+  margin: 25px;
 }
 @media screen and (min-width: 768px) {
   #restaurants h2 {
@@ -987,14 +1024,14 @@ img#le_delice_des_sens {
 #restaurants a {
   text-decoration: none;
 }
-#restaurants a:hover article {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-}
 #restaurants article {
   position: relative;
   margin: 20px;
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#restaurants article:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 768px) {
   #restaurants article {
@@ -1090,12 +1127,7 @@ footer {
   padding: 20px 20px 35px;
 }
 footer h2 {
-  margin-bottom: 5px;
-}
-@media screen and (min-width: 768px) {
-  footer h2 {
-    margin-bottom: 10px;
-  }
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 992px) {
   footer ul {

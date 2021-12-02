@@ -1,3 +1,78 @@
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%;
+}
+
+legend {
+  color: #000;
+}
+
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
 /*** Typography ***/
 /** General **/
 @font-face {
@@ -18,19 +93,23 @@ h1 {
     font-size: 2.8em;
   }
 }
+
 h2,
 h3,
 p,
 input {
   font-family: roboto;
 }
+
 h2,
 h3 {
   font-weight: 700;
 }
+
 h2 {
   font-size: 1.5em;
 }
+
 /** Header **/
 header a {
   font-size: 1.25em;
@@ -45,6 +124,7 @@ header a {
     font-size: 1.75em;
   }
 }
+
 /** Main **/
 /* Heart button */
 button {
@@ -58,6 +138,7 @@ button i:nth-child(2) {
     font-size: 1.625em;
   }
 }
+
 /* Menu article */
 #menu h2 {
   font-family: shrikhand;
@@ -104,6 +185,7 @@ button i:nth-child(2) {
     font-size: 1.125em;
   }
 }
+
 /* Search section */
 #search-bar input {
   font-weight: 700;
@@ -121,6 +203,7 @@ button i:nth-child(2) {
     font-size: 1.25em;
   }
 }
+
 /* Functioning section */
 @media screen and (min-width: 768px) {
   #functioning h2 {
@@ -169,6 +252,7 @@ button i:nth-child(2) {
     font-size: 1.125em;
   }
 }
+
 /* Restaurants section */
 #restaurants p.new {
   font-size: 0.875em;
@@ -190,6 +274,7 @@ button i:nth-child(2) {
     font-size: 1.25em;
   }
 }
+
 /** Footer **/
 footer h2 {
   font-family: shrikhand;
@@ -214,6 +299,7 @@ footer i {
     font-size: 1.25em;
   }
 }
+
 /*** Components ***/
 /** Loading spinner **/
 #loader-container,
@@ -221,6 +307,7 @@ footer i {
 .utensils-mask {
   background-color: #F6F6F6;
 }
+
 #loader-container {
   position: fixed;
   top: 0;
@@ -231,6 +318,7 @@ footer i {
   animation: end-animation 3s linear;
   animation-fill-mode: forwards;
 }
+
 #loader {
   background: linear-gradient(to right, #FF79DA 10%, white 42%);
   position: absolute;
@@ -241,6 +329,7 @@ footer i {
   animation: spin 3s linear;
   transform: translateZ(0);
 }
+
 #loader:before {
   background-color: white;
   position: absolute;
@@ -249,6 +338,7 @@ footer i {
   border-radius: 100% 0 0 0;
   content: "";
 }
+
 #loader:after {
   background-color: #9356DC;
   position: absolute;
@@ -263,6 +353,7 @@ footer i {
   content: "";
   opacity: 0.6;
 }
+
 #fork,
 #knife {
   color: #9356DC;
@@ -271,27 +362,32 @@ footer i {
   top: 24%;
   opacity: 0.6;
 }
+
 #fork .utensils-mask {
   position: absolute;
   left: 60%;
   width: 2.4vw;
   height: 7vw;
 }
+
 #knife {
   left: 13.2vw;
 }
+
 #knife .utensils-mask {
   position: absolute;
   right: 45%;
   width: 2.4vw;
   height: 7vw;
 }
+
 #elements {
   position: relative;
   width: 19vw;
   height: 10vw;
   margin: 45vh auto;
 }
+
 @keyframes end-animation {
   0% {
     background-color: #F6F6F6;
@@ -363,6 +459,7 @@ button .mask {
 button:hover .mask {
   transform: scaleY(0);
 }
+
 /* Submit button */
 input[type=submit] {
   cursor: pointer;
@@ -374,6 +471,7 @@ input[type=submit]:hover {
   opacity: 0.8;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
+
 /** Banner **/
 #banner {
   overflow: hidden;
@@ -398,6 +496,7 @@ input[type=submit]:hover {
     border-radius: 40px;
   }
 }
+
 img#la_note_enchantee {
   width: 100%;
   object-position: center -96px;
@@ -407,6 +506,7 @@ img#la_note_enchantee {
     object-position: center -190px;
   }
 }
+
 img#le_delice_des_sens {
   width: 107%;
   object-position: -14px top;
@@ -417,6 +517,7 @@ img#le_delice_des_sens {
     object-position: center -15px;
   }
 }
+
 /*** Layouts ***/
 /** Header **/
 header {
@@ -459,12 +560,14 @@ header.menu-pages {
     box-shadow: none;
   }
 }
+
 /** Main **/
 @media screen and (min-width: 768px) {
   main {
     margin-top: 15px;
   }
 }
+
 /* Menu article */
 #menu {
   background-color: #F6F6F6;
@@ -716,6 +819,7 @@ header.menu-pages {
     border-radius: inherit;
   }
 }
+
 /* Search section */
 #search {
   background-color: #F6F6F6;
@@ -785,6 +889,7 @@ header.menu-pages {
     margin: 0 50px;
   }
 }
+
 /** Footer **/
 footer {
   background-color: #353535;
@@ -828,6 +933,7 @@ footer span {
     padding: 40px 50px 65px;
   }
 }
+
 /** Home page **/
 /* Funtioning section */
 #functioning {
@@ -925,6 +1031,7 @@ footer span {
     gap: 50px;
   }
 }
+
 /* Restaurants section */
 #restaurants {
   background-color: #F6F6F6;
@@ -1050,3 +1157,5 @@ footer span {
     padding: 25px 30px 44px;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

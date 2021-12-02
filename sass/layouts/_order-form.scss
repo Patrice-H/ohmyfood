@@ -142,7 +142,7 @@
         position: absolute;
         display: none;
         &:checked + label span.price {
-            margin-right: 68px;
+            margin-right: 76px;
         } 
         &:checked + label span.check {
             transform: translateX(-56px);

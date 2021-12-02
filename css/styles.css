@@ -713,7 +713,7 @@ header.menu-pages {
   display: none;
 }
 #menu input[type=checkbox]:checked + label span.price {
-  margin-right: 68px;
+  margin-right: 76px;
 }
 #menu input[type=checkbox]:checked + label span.check {
   transform: translateX(-56px);

@@ -173,7 +173,7 @@
             @include component-shadow(rgba($color: $ninth-color, $alpha: 0.6));
         }
         &:hover span.price {
-            margin-right: 68px;
+            margin-right: 76px;
         }
         &:hover span.check {
             transform: translateX(-56px);
@@ -209,7 +209,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            margin: 0 15px 11px 0;
+            margin: 0 20px 11px 0;
             transition: margin-right 400ms;
         }
         &.check {

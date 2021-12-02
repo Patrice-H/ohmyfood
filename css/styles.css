@@ -744,7 +744,7 @@ header.menu-pages {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 }
 #menu label:hover span.price {
-  margin-right: 68px;
+  margin-right: 76px;
 }
 #menu label:hover span.check {
   transform: translateX(-56px);
@@ -781,7 +781,7 @@ header.menu-pages {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin: 0 15px 11px 0;
+  margin: 0 20px 11px 0;
   transition: margin-right 400ms;
 }
 #menu span.check {

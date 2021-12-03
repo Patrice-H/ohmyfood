@@ -977,10 +977,10 @@ footer span {
     padding: 0 14px 22px;
   }
 }
-#functioning div:nth-child(4) {
-  background-color: rgba(147, 86, 220, 0.1);
+#functioning div:hover {
+  background-color: rgba(147, 86, 220, 0.15);
 }
-#functioning div:nth-child(4) i {
+#functioning div:hover i {
   color: #9356DC;
   opacity: 1;
 }

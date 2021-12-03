@@ -10,12 +10,19 @@
         margin: 0 0 0 18px;
     }
     & button {
+        position: absolute;
         top: 40px;
         right: 50px;
         & .mask {
             background-color: $fifth-color;
             right: -27px;
             bottom: -29px;
+        }
+        @media screen and (min-width: 768px) {
+            right: 90px;
+        }
+        @media screen and (min-width: 992px) {
+            right: 65px;
         }
     }
     & h3 {

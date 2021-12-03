@@ -416,21 +416,11 @@ footer i {
 /** Buttons **/
 /* Heart button */
 button {
-  background-color: transparent;
   border: none;
-  position: absolute;
   cursor: pointer;
 }
-button:hover i:nth-child(1) {
-  opacity: 1;
-}
-button:hover i:nth-child(2) {
-  opacity: 0;
-  transition: opacity 1700ms;
-}
-button i:nth-child(1) {
+button i, button .mask {
   position: absolute;
-  opacity: 0;
 }
 button i:nth-child(1)::before {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -439,18 +429,25 @@ button i:nth-child(1)::before {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-button i:nth-child(2) {
-  position: absolute;
-  opacity: 1;
-  z-index: 2;
-}
 button .mask {
   width: 36px;
   height: 32px;
-  position: absolute;
-  right: -34px;
-  bottom: -31px;
-  background-color: white;
+}
+button i:nth-child(1) {
+  opacity: 0;
+}
+button i:nth-child(2) {
+  opacity: 1;
+  z-index: 2;
+}
+button:hover i:nth-child(1) {
+  opacity: 1;
+}
+button:hover i:nth-child(2) {
+  opacity: 0;
+  transition: opacity 1700ms;
+}
+button .mask {
   transform-origin: 50% 0;
   transform: scaleY(1);
   transition: transform 2000ms;
@@ -581,6 +578,7 @@ header.menu-pages {
   margin: 0 0 0 18px;
 }
 #menu button {
+  position: absolute;
   top: 40px;
   right: 50px;
 }
@@ -588,6 +586,16 @@ header.menu-pages {
   background-color: #F6F6F6;
   right: -27px;
   bottom: -29px;
+}
+@media screen and (min-width: 768px) {
+  #menu button {
+    right: 90px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #menu button {
+    right: 65px;
+  }
 }
 #menu h3 {
   margin-top: 30px;
@@ -1134,6 +1142,11 @@ footer span {
   top: 191px;
   right: 45px;
   padding: 0;
+}
+#restaurants button .mask {
+  background-color: white;
+  right: -34px;
+  bottom: -31px;
 }
 @media screen and (min-width: 768px) {
   #restaurants button {

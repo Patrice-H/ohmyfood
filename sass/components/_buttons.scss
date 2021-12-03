@@ -1,10 +1,32 @@
 /** Buttons **/
 /* Heart button */
+    // Layout
 button {
-    background-color: transparent;
     border: none;
-    position: absolute;
     cursor: pointer;
+    & i, 
+    & .mask {
+        position: absolute;
+    }
+    & i:nth-child(1)::before {
+        background: linear-gradient($second-color, $first-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+    & .mask {
+        width: 36px;
+        height: 32px;
+    }
+    // Animation
+    & i:nth-child(1) {
+        opacity: 0;
+    }
+    & i:nth-child(2) {
+        opacity: 1;
+        z-index: 2;
+    }
     &:hover i:nth-child(1) {
         opacity: 1;
     }
@@ -12,29 +34,7 @@ button {
         opacity: 0;
         transition: opacity 1700ms;
     }
-    & i:nth-child(1) {
-        position: absolute;
-        opacity: 0;
-        &::before {
-            background: linear-gradient($second-color, $first-color);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
-    }
-    & i:nth-child(2) {
-        position: absolute;
-        opacity: 1;
-        z-index: 2;
-    }
     & .mask {
-        width: 36px;
-        height: 32px;
-        position: absolute;
-        right: -34px;
-        bottom: -31px;
-        background-color: $eighth-color;
         transform-origin: 50% 0;
         transform: scaleY(1);
         transition: transform 2000ms;

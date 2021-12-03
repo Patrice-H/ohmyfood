@@ -581,6 +581,7 @@ header.menu-pages {
   position: absolute;
   top: 40px;
   right: 50px;
+  padding: 0;
 }
 #menu button .mask {
   background-color: #F6F6F6;

@@ -1,1 +1,1 @@
-![logo](https://github.com/Patrice-H/PatriceHochard_3_17112021/blob/dev/images/title.jpg)
+![logo](https://github.com/Patrice-H/PatriceHochard_3_17112021/blob/dev/images/title.png)

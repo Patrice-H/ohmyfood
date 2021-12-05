@@ -1,1 +1,1 @@
-![] (images/ohmyfood.png)
+![] (./images/ohmyfood.png)
